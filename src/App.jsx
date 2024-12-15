@@ -2,6 +2,11 @@ import "./App.css";
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5, faCss3Alt, faJs, faNodeJs, faGitAlt, faGithub, faAws, faDocker, faBootstrap } from '@fortawesome/free-brands-svg-icons';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { BiLogoMongodb } from "react-icons/bi";
 
 
 
@@ -150,68 +155,174 @@ function App() {
           </div>
         </div>
       </section>
-              <br /><br />
+      <br /><br />
       {/* about section */}
       <section id="about" className="dark:bg-gray-800 dark:text-gray-200 py-16 px-8 mt-10">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
-        <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-          Hi! I'm Nadim Mostofa, and I specialize in web development. Here’s a little more about me and my educational journey.
-        </p>
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
+          <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
+            Hi! I'm Nadim Mostofa, and I specialize in web development. Here’s a little more about me and my educational journey.
+          </p>
 
-        <Tabs>
-          <TabList className="flex justify-center space-x-6 mb-8">
-            <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
-              Education
-            </Tab>
-            <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
-              Academics
-            </Tab>
-            {/* Added Expertise Tab */}
-            <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
-              Expertise
-            </Tab>
-          </TabList>
+          <Tabs>
+            <TabList className="flex justify-center space-x-6 mb-8">
+              <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                Education
+              </Tab>
+              <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                Academics
+              </Tab>
+              {/* Added Expertise Tab */}
+              <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                Expertise
+              </Tab>
+            </TabList>
 
-          {/* Education Tab */}
-          <TabPanel>
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold text-violet-500 mb-4">Education</h3>
-              <p className="text-lg text-gray-800 dark:text-gray-300">
-                I completed my **SSC** at **Rangpur Technical School & College** in the session 2019-2020, specializing in **Civil Drafting with CAD**.
-                My GPA was **4.75**. Currently, I'm pursuing my **Diploma in Engineering** at **Kurigram Polytechnic Institute**, with a major in **Computer Science and Technology**.
-                I will complete my diploma in **2025** and am currently in my **6th semester**.
-              </p>
+            {/* Education Tab */}
+            <TabPanel>
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold text-violet-500 mb-4">Education</h3>
+                <p className="text-lg text-gray-800 dark:text-gray-300">
+                  I completed my **SSC** at **Rangpur Technical School & College** in the session 2019-2020, specializing in **Civil Drafting with CAD**.
+                  My GPA was **4.75**. Currently, I'm pursuing my **Diploma in Engineering** at **Kurigram Polytechnic Institute**, with a major in **Computer Science and Technology**.
+                  I will complete my diploma in **2025** and am currently in my **6th semester**.
+                </p>
+              </div>
+            </TabPanel>
+
+            {/* Academics Tab */}
+            <TabPanel>
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold text-violet-500 mb-4">Academic Achievements</h3>
+                <p className="text-lg text-gray-800 dark:text-gray-300">
+                  Throughout my academic career, I have developed a strong interest in technology, especially in programming and web development.
+                  I have successfully completed my 5th semester exams and am preparing for the 6th semester.
+                  I'm always looking for ways to improve my skills and gain practical knowledge.
+                </p>
+              </div>
+            </TabPanel>
+
+            {/* Expertise Tab */}
+            <TabPanel>
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold text-violet-500 mb-4">Expertise</h3>
+                <p className="text-lg text-gray-800 dark:text-gray-300">
+                  I am an expert in **MERN Stack Web Development**, with a strong focus on **Frontend Development**.
+                  I specialize in **React.js** to create dynamic, user-friendly, and responsive websites.
+                  My skills also extend to **Node.js**, **Express.js**, and **MongoDB**, which enable me to build full-stack applications.
+                  I am passionate about developing engaging and functional web applications, making React.js my go-to choice for frontend development.
+                </p>
+              </div>
+            </TabPanel>
+          </Tabs>
+        </div>
+      </section>
+      <br /><br />
+      {/* skills section */}
+      <section className="dark:bg-[#6586c9] dark:text-gray-200 py-16 px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+          {/* Left Side - Skills Description */}
+          <div className="text-center lg:text-left">
+            <h2 className="text-4xl font-bold text-black mb-6">My Skills</h2>
+            <p className="text-xl text-black dark:text-black mb-8">
+              I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
+            </p>
+
+            <ul className="text-lg text-black dark:text-black space-y-4">
+              <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap</li>
+              <li><strong>Back-End Development:</strong> Node.js, Express.js</li>
+              <li><strong>Databases:</strong> MongoDB</li>
+              <li><strong>APIs:</strong> REST APIs</li>
+              <li><strong>Project Management:</strong> Proven ability to manage and deliver projects efficiently</li>
+              <li><strong>Networking:</strong> Good experience in networking</li>
+              <li><strong>Other's:</strong> Git and  GitHub Project Collaboration, AWS, Docker</li>
+            </ul>
+          </div>
+
+          {/* Right Side - Icons */}
+          <div className="text-center">
+            <h3 className="text-3xl font-semibold text-black mb-6">Technologies</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12">
+
+              {/* Front-End Icons */}
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faHtml5} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">HTML5</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faCss3Alt} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">CSS3</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faJs} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">JavaScript</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faReact} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">React.js</p>
+              </div>
+
+              {/* Back-End Icons */}
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faNodeJs} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">Node.js</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <BiLogoMongodb />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">MongoDB</p>
+              </div>
+
+              {/* Version Control Icons */}
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faGitAlt} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">Git</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faGithub} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">GitHub</p>
+              </div>
+
+              {/* Other Skills */}
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faAws} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">AWS</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faDocker} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">Docker</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                  <FontAwesomeIcon icon={faBootstrap} />
+                </div>
+                <p className="text-lg text-gray-800 dark:text-gray-300">Bootstrap</p>
+              </div>
             </div>
-          </TabPanel>
+          </div>
 
-          {/* Academics Tab */}
-          <TabPanel>
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold text-violet-500 mb-4">Academic Achievements</h3>
-              <p className="text-lg text-gray-800 dark:text-gray-300">
-                Throughout my academic career, I have developed a strong interest in technology, especially in programming and web development.
-                I have successfully completed my 5th semester exams and am preparing for the 6th semester.
-                I'm always looking for ways to improve my skills and gain practical knowledge.
-              </p>
-            </div>
-          </TabPanel>
-
-          {/* Expertise Tab */}
-          <TabPanel>
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold text-violet-500 mb-4">Expertise</h3>
-              <p className="text-lg text-gray-800 dark:text-gray-300">
-                I am an expert in **MERN Stack Web Development**, with a strong focus on **Frontend Development**. 
-                I specialize in **React.js** to create dynamic, user-friendly, and responsive websites. 
-                My skills also extend to **Node.js**, **Express.js**, and **MongoDB**, which enable me to build full-stack applications.
-                I am passionate about developing engaging and functional web applications, making React.js my go-to choice for frontend development.
-              </p>
-            </div>
-          </TabPanel>
-        </Tabs>
-      </div>
-    </section>
+        </div>
+      </section>
     </main>
   );
 }
