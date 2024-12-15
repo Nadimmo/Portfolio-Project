@@ -58,7 +58,7 @@ function App() {
                 </a>
               </li>
               <li>
-                <a href="/project" className="hover:text-purple-400">
+                <a href="#project" className="hover:text-purple-400">
                   Project
                 </a>
               </li>
@@ -135,7 +135,7 @@ function App() {
               <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="#project"
                   className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50 hover:shadow-lg transition-all">
                   View My Work
                 </a>
@@ -227,7 +227,7 @@ function App() {
       {/* skills section */}
       <ScrollAnimation animateIn='bounceInRight'
         animateOut='bounceOutLeft'>
-        <section className="py-16 px-8 font-serif">
+        <section id="skills" className="py-16 px-8 font-serif">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             {/* Left Side - Skills Description */}
@@ -333,10 +333,10 @@ function App() {
         </section>
       </ScrollAnimation>
       {/* project section */}
-      <ScrollAnimation animateIn='fadeIn'
-        animateOut='fadeOut'>
-        <section className="py-16 px-8 text-black font-serif">
-          {/* first */}
+      <section id="project" className="py-16 px-8 text-black font-serif">
+        {/* first */}
+        <ScrollAnimation animateIn='bounceInLeft'
+          animateOut='bounceOutRight'>
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Project Image */}
@@ -345,7 +345,7 @@ function App() {
                   {/* Laptop Screen */}
                   <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
                     <img
-                      src="https://i.ibb.co.com/HGQ3QgC/44.jpg"
+                      src="https://i.ibb.co.com/cFVrVMK/First.png"
                       alt="Project Screenshot"
                       className="w-full h-full object-cover"
                     />
@@ -356,14 +356,13 @@ function App() {
               {/* Right Side - Project Title and Description */}
               <div className="space-y-4 text-center md:text-left">
                 <h2 className="text-2xl font-bold">
-                  Project Title
+                  Survey Pro
                 </h2>
                 <p className="text-black">
-                  A short description of the project goes here. Explain the purpose,
-                  technologies used, and what makes it unique in just a few lines.
+                  At SurveyPro, we empower businesses and individuals to gather insights effortlessly. Whether you're conducting market research, gathering employee feedback, or exploring new trends, our tools are designed to make your surveys seamless and impactful.
                 </p>
                 <a
-                  href="#"
+                  href="https://assignment-12-6f33b.web.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all"
@@ -373,20 +372,25 @@ function App() {
               </div>
             </div>
           </div>
+        </ScrollAnimation>
+        {/* second */}
+        <ScrollAnimation animateIn='bounceInRight'
+          animateOut='bounceOutLeft'>
           {/* second */}
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Project Title and Description */}
               <div className="space-y-4 text-center md:text-left">
                 <h2 className="text-2xl font-bold">
-                  Project Title
+                  Cyclist Club
                 </h2>
                 <p className="text-black">
-                  A short description of the project goes here. Explain the purpose,
-                  technologies used, and what makes it unique in just a few lines.
+                  Racing is still encouraged and remains an important part of the Team. Members are welcome to race if they choose to do so.
+
+
                 </p>
                 <a
-                  href="#"
+                  href="https://cylist-club.web.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all"
@@ -400,7 +404,7 @@ function App() {
                   {/* Laptop Screen */}
                   <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
                     <img
-                      src="https://i.ibb.co.com/HGQ3QgC/44.jpg"
+                      src="https://i.ibb.co.com/cYmKjXp/Second.png"
                       alt="Project Screenshot"
                       className="w-full h-full object-cover"
                     />
@@ -409,7 +413,10 @@ function App() {
               </div>
             </div>
           </div>
-          {/* third */}
+        </ScrollAnimation>
+        {/* third */}
+        <ScrollAnimation animateIn='bounceInLeft'
+          animateOut='bounceOutRight'>
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Project Image */}
@@ -418,7 +425,7 @@ function App() {
                   {/* Laptop Screen */}
                   <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
                     <img
-                      src="https://i.ibb.co.com/HGQ3QgC/44.jpg"
+                      src="https://i.ibb.co.com/f9W3jWZ/Third.png"
                       alt="Project Screenshot"
                       className="w-full h-full object-cover"
                     />
@@ -429,14 +436,13 @@ function App() {
               {/* Right Side - Project Title and Description */}
               <div className="space-y-4 text-center md:text-left">
                 <h2 className="text-2xl font-bold">
-                  Project Title
+                  Doctor House
                 </h2>
                 <p className="text-black">
-                  A short description of the project goes here. Explain the purpose,
-                  technologies used, and what makes it unique in just a few lines.
+                  At Doctor House, we combine medical expertise, state-of-the-art facilities, and heartfelt compassion to ensure the best healthcare experience for you.
                 </p>
                 <a
-                  href="#"
+                  href="https://doctorhouse-259ce.web.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all"
@@ -446,20 +452,21 @@ function App() {
               </div>
             </div>
           </div>
-          {/* four */}
+        </ScrollAnimation>
+        <ScrollAnimation animateIn='bounceInRight'
+          animateOut='bounceOutLeft'>
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Project Title and Description */}
               <div className="space-y-4 text-center md:text-left">
                 <h2 className="text-2xl font-bold">
-                  Project Title
+                  Tech job Fair
                 </h2>
                 <p className="text-black">
-                  A short description of the project goes here. Explain the purpose,
-                  technologies used, and what makes it unique in just a few lines.
+                  Join TechJobFair, the ultimate event for tech professionals and companies! Connect with top employers, explore cutting-edge technologies, and discover exciting career opportunities. Network with industry leaders and attend insightful workshops to advance your tech career. Don’t miss this chance to elevate your professional journey!
                 </p>
                 <a
-                  href="#"
+                  href="https://assignment-11-7d11c.web.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all"
@@ -473,7 +480,7 @@ function App() {
                   {/* Laptop Screen */}
                   <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
                     <img
-                      src="https://i.ibb.co.com/HGQ3QgC/44.jpg"
+                      src="https://i.ibb.co.com/0YPXvr7/Four.png"
                       alt="Project Screenshot"
                       className="w-full h-full object-cover"
                     />
@@ -482,81 +489,9 @@ function App() {
               </div>
             </div>
           </div>
-          {/* five */}
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              {/* Left Side - Project Image */}
-              <div className="relative w-full h-64 md:h-80 flex justify-center items-center">
-                <div className="w-[90%] h-[80%] bg-black rounded-md relative shadow-lg overflow-hidden">
-                  {/* Laptop Screen */}
-                  <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
-                    <img
-                      src="https://i.ibb.co.com/HGQ3QgC/44.jpg"
-                      alt="Project Screenshot"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
+        </ScrollAnimation>
 
-              {/* Right Side - Project Title and Description */}
-              <div className="space-y-4 text-center md:text-left">
-                <h2 className="text-2xl font-bold">
-                  Project Title
-                </h2>
-                <p className="text-black">
-                  A short description of the project goes here. Explain the purpose,
-                  technologies used, and what makes it unique in just a few lines.
-                </p>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all"
-                >
-                  Live Preview
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* six */}
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              {/* Left Side - Project Title and Description */}
-              <div className="space-y-4 text-center md:text-left">
-                <h2 className="text-2xl font-bold">
-                  Project Title
-                </h2>
-                <p className="text-black">
-                  A short description of the project goes here. Explain the purpose,
-                  technologies used, and what makes it unique in just a few lines.
-                </p>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all"
-                >
-                  Live Preview
-                </a>
-              </div>
-              {/* Right Side - Project Image */}
-              <div className="relative w-full h-64 md:h-80 flex justify-center items-center">
-                <div className="w-[90%] h-[80%] bg-black rounded-md relative shadow-lg overflow-hidden">
-                  {/* Laptop Screen */}
-                  <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
-                    <img
-                      src="https://i.ibb.co.com/HGQ3QgC/44.jpg"
-                      alt="Project Screenshot"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
+      </section>
 
     </main>
   );
