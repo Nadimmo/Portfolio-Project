@@ -42,3 +42,31 @@
 }
 
 
+/* For dark mode */
+.dark-mode {
+  background-color: #1a202c; /* Dark background */
+  color: #f7fafc; /* Light text */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* For light mode */
+.light-mode {
+  background-color: #f7fafc; /* Light background */
+  color: #1a202c; /* Dark text */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Button styles */
+.dark-mode-button {
+  background-color: #000; /* Dark button background */
+  color: #fff; /* Light button text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.light-mode-button {
+  background-color: #fff; /* Light button background */
+  color: #000; /* Dark button text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+}
