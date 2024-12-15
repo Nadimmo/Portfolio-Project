@@ -7,6 +7,7 @@ import { faHtml5, faCss3Alt, faJs, faNodeJs, faGitAlt, faGithub, faAws, faDocker
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { BiLogoMongodb } from "react-icons/bi";
+import ScrollAnimation from "react-animate-on-scroll";
 
 
 
@@ -116,213 +117,223 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Banner Section */}
-      <section className="dark:bg-gray-100 dark:text-gray-800">
-        <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-          {/* Text Section */}
-          <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-            <h1 className="text-5xl font-bold leading-none sm:text-6xl">
-              Hi, I'm
-              <span className="dark:text-violet-600"> Nadim Mostofa</span>
-            </h1>
-            <p className="mt-6 mb-8 text-lg sm:mb-12">
-              A passionate and dedicated junior web developer with hands-on experience in the MERN stack.
-              I specialize in React.js, utilizing my expertise to create innovative and engaging websites.
-            </p>
-            <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50 hover:shadow-lg transition-all">
-                View My Work
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-white transition-all">
-                Contact Me
-              </a>
+      <ScrollAnimation animateIn='fadeIn'
+        animateOut='fadeOut' >
+        <section className="dark:bg-gray-100 dark:text-gray-800">
+          <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+            {/* Text Section */}
+            <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+              <h1 className="text-5xl font-bold leading-none sm:text-6xl">
+                Hi, I'm
+                <span className="dark:text-violet-600"> Nadim Mostofa</span>
+              </h1>
+              <p className="mt-6 mb-8 text-lg sm:mb-12">
+                A passionate and dedicated junior web developer with hands-on experience in the MERN stack.
+                I specialize in React.js, utilizing my expertise to create innovative and engaging websites.
+              </p>
+              <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50 hover:shadow-lg transition-all">
+                  View My Work
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-white transition-all">
+                  Contact Me
+                </a>
+              </div>
+            </div>
+
+            {/* Image Section with Hover and Animation */}
+            <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+              <img
+                src="https://i.ibb.co.com/kxmnLsb/profile.jpg"
+                alt="Profile"
+                className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-full border-4 border-violet-600 shadow-lg transition-transform duration-500 hover:scale-110 hover:rotate-3" />
             </div>
           </div>
-
-          {/* Image Section with Hover and Animation */}
-          <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-            <img
-              src="https://i.ibb.co.com/kxmnLsb/profile.jpg"
-              alt="Profile"
-              className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-full border-4 border-violet-600 shadow-lg transition-transform duration-500 hover:scale-110 hover:rotate-3" />
-          </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
       <br /><br />
       {/* about section */}
-      <section id="about" className="dark:bg-gray-800 dark:text-gray-200 py-16 px-8 mt-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
-          <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-            Hi! I'm Nadim Mostofa, and I specialize in web development. Here’s a little more about me and my educational journey.
-          </p>
-
-          <Tabs>
-            <TabList className="flex justify-center space-x-6 mb-8">
-              <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
-                Education
-              </Tab>
-              <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
-                Academics
-              </Tab>
-              {/* Added Expertise Tab */}
-              <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
-                Expertise
-              </Tab>
-            </TabList>
-
-            {/* Education Tab */}
-            <TabPanel>
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-violet-500 mb-4">Education</h3>
-                <p className="text-lg text-gray-800 dark:text-gray-300">
-                  I completed my **SSC** at **Rangpur Technical School & College** in the session 2019-2020, specializing in **Civil Drafting with CAD**.
-                  My GPA was **4.75**. Currently, I'm pursuing my **Diploma in Engineering** at **Kurigram Polytechnic Institute**, with a major in **Computer Science and Technology**.
-                  I will complete my diploma in **2025** and am currently in my **6th semester**.
-                </p>
-              </div>
-            </TabPanel>
-
-            {/* Academics Tab */}
-            <TabPanel>
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-violet-500 mb-4">Academic Achievements</h3>
-                <p className="text-lg text-gray-800 dark:text-gray-300">
-                  Throughout my academic career, I have developed a strong interest in technology, especially in programming and web development.
-                  I have successfully completed my 5th semester exams and am preparing for the 6th semester.
-                  I'm always looking for ways to improve my skills and gain practical knowledge.
-                </p>
-              </div>
-            </TabPanel>
-
-            {/* Expertise Tab */}
-            <TabPanel>
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-violet-500 mb-4">Expertise</h3>
-                <p className="text-lg text-gray-800 dark:text-gray-300">
-                  I am an expert in **MERN Stack Web Development**, with a strong focus on **Frontend Development**.
-                  I specialize in **React.js** to create dynamic, user-friendly, and responsive websites.
-                  My skills also extend to **Node.js**, **Express.js**, and **MongoDB**, which enable me to build full-stack applications.
-                  I am passionate about developing engaging and functional web applications, making React.js my go-to choice for frontend development.
-                </p>
-              </div>
-            </TabPanel>
-          </Tabs>
-        </div>
-      </section>
-      <br /><br />
-      {/* skills section */}
-      <section className="dark:bg-[#6586c9] dark:text-gray-200 py-16 px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-          {/* Left Side - Skills Description */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-4xl font-bold text-black mb-6">My Skills</h2>
-            <p className="text-xl text-black dark:text-black mb-8">
-              I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
+      <ScrollAnimation  animateIn='bounceInLeft'
+        animateOut='bounceOutRight'>
+        <section id="about" className="dark:bg-gray-800 dark:text-gray-200 py-16 px-8 mt-10">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
+              Hi! I'm Nadim Mostofa, and I specialize in web development. Here’s a little more about me and my educational journey.
             </p>
 
-            <ul className="text-lg text-black dark:text-black space-y-4">
-              <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap</li>
-              <li><strong>Back-End Development:</strong> Node.js, Express.js</li>
-              <li><strong>Databases:</strong> MongoDB</li>
-              <li><strong>APIs:</strong> REST APIs</li>
-              <li><strong>Project Management:</strong> Proven ability to manage and deliver projects efficiently</li>
-              <li><strong>Networking:</strong> Good experience in networking</li>
-              <li><strong>Other's:</strong> Git and  GitHub Project Collaboration, AWS, Docker</li>
-            </ul>
+            <Tabs>
+              <TabList className="flex justify-center space-x-6 mb-8">
+                <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                  Education
+                </Tab>
+                <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                  Academics
+                </Tab>
+                {/* Added Expertise Tab */}
+                <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                  Expertise
+                </Tab>
+              </TabList>
+
+              {/* Education Tab */}
+              <TabPanel>
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-violet-500 mb-4">Education</h3>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">
+                    I completed my **SSC** at **Rangpur Technical School & College** in the session 2019-2020, specializing in **Civil Drafting with CAD**.
+                    My GPA was **4.75**. Currently, I'm pursuing my **Diploma in Engineering** at **Kurigram Polytechnic Institute**, with a major in **Computer Science and Technology**.
+                    I will complete my diploma in **2025** and am currently in my **6th semester**.
+                  </p>
+                </div>
+              </TabPanel>
+
+              {/* Academics Tab */}
+              <TabPanel>
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-violet-500 mb-4">Academic Achievements</h3>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">
+                    Throughout my academic career, I have developed a strong interest in technology, especially in programming and web development.
+                    I have successfully completed my 5th semester exams and am preparing for the 6th semester.
+                    I'm always looking for ways to improve my skills and gain practical knowledge.
+                  </p>
+                </div>
+              </TabPanel>
+
+              {/* Expertise Tab */}
+              <TabPanel>
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-violet-500 mb-4">Expertise</h3>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">
+                    I am an expert in **MERN Stack Web Development**, with a strong focus on **Frontend Development**.
+                    I specialize in **React.js** to create dynamic, user-friendly, and responsive websites.
+                    My skills also extend to **Node.js**, **Express.js**, and **MongoDB**, which enable me to build full-stack applications.
+                    I am passionate about developing engaging and functional web applications, making React.js my go-to choice for frontend development.
+                  </p>
+                </div>
+              </TabPanel>
+            </Tabs>
           </div>
+        </section>
+      </ScrollAnimation>
+      <br /><br />
+      {/* skills section */}
+      <ScrollAnimation animateIn='bounceInRight'
+        animateOut='bounceOutLeft'>
+        <section className="dark:bg-[#6586c9] dark:text-gray-200 py-16 px-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
 
-          {/* Right Side - Icons */}
-          <div className="text-center">
-            <h3 className="text-3xl font-semibold text-black mb-6">Technologies</h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12">
+            {/* Left Side - Skills Description */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-4xl font-bold text-black mb-6">My Skills</h2>
+              <p className="text-xl text-black dark:text-black mb-8">
+                I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
+              </p>
 
-              {/* Front-End Icons */}
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faHtml5} />
-                </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">HTML5</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faCss3Alt} />
-                </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">CSS3</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faJs} />
-                </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">JavaScript</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faReact} />
-                </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">React.js</p>
-              </div>
+              <ul className="text-lg text-black dark:text-black space-y-4">
+                <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap</li>
+                <li><strong>Back-End Development:</strong> Node.js, Express.js</li>
+                <li><strong>Databases:</strong> MongoDB</li>
+                <li><strong>APIs:</strong> REST APIs</li>
+                <li><strong>Project Management:</strong> Proven ability to manage and deliver projects efficiently</li>
+                <li><strong>Networking:</strong> Good experience in networking</li>
+                <li><strong>Other's:</strong> Git and  GitHub Project Collaboration, AWS, Docker</li>
+              </ul>
+            </div>
 
-              {/* Back-End Icons */}
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faNodeJs} />
-                </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">Node.js</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <BiLogoMongodb />
-                </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">MongoDB</p>
-              </div>
+            {/* Right Side - Icons */}
+            <div className="text-center">
+              <h3 className="text-3xl font-semibold text-black mb-6">Technologies</h3>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12">
 
-              {/* Version Control Icons */}
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faGitAlt} />
+                {/* Front-End Icons */}
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faHtml5} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">HTML5</p>
                 </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">Git</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faGithub} />
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faCss3Alt} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">CSS3</p>
                 </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">GitHub</p>
-              </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faJs} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">JavaScript</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faReact} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">React.js</p>
+                </div>
 
-              {/* Other Skills */}
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faAws} />
+                {/* Back-End Icons */}
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faNodeJs} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">Node.js</p>
                 </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">AWS</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faDocker} />
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <BiLogoMongodb />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">MongoDB</p>
                 </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">Docker</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                  <FontAwesomeIcon icon={faBootstrap} />
+
+                {/* Version Control Icons */}
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faGitAlt} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">Git</p>
                 </div>
-                <p className="text-lg text-gray-800 dark:text-gray-300">Bootstrap</p>
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faGithub} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">GitHub</p>
+                </div>
+
+                {/* Other Skills */}
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faAws} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">AWS</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faDocker} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">Docker</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                    <FontAwesomeIcon icon={faBootstrap} />
+                  </div>
+                  <p className="text-lg text-gray-800 dark:text-gray-300">Bootstrap</p>
+                </div>
               </div>
             </div>
-          </div>
 
-        </div>
-      </section>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+
     </main>
   );
 }
