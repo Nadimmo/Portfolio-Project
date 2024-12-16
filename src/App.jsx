@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -22,7 +21,7 @@ function App() {
   return (
     <div className="bg-white">
       {/* navbar section */}
-      <section className="transition-all">
+      <section className="transition-all fixed z-10 w-full">
         <div
           className={`navbar ${darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-900"
             } transition-all shadow-md`}
@@ -43,32 +42,38 @@ function App() {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-4 space-x-6 font-semibold">
               <li>
-                <a href="/" className="hover:text-purple-400">
+                <a href="/" className="relative hover:text-purple-400 group">
                   Home
+                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-purple-400">
+                <a href="#about" className="relative hover:text-purple-400 group">
                   About
+                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
               <li>
-                <a href="#skills" className="hover:text-purple-400">
+                <a href="#skills" className="relative hover:text-purple-400 group">
                   Skills
+                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
               <li>
-                <a href="#project" className="hover:text-purple-400">
+                <a href="#project" className="relative hover:text-purple-400 group">
                   Project
+                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-purple-400">
+                <a href="#contact" className="relative hover:text-purple-400 group">
                   Contact
+                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
             </ul>
           </div>
+
 
           {/* Right Side - Dark/Light Mode Toggle */}
           <div className="navbar-end">
@@ -229,13 +234,20 @@ function App() {
         <br /><br />
         {/* skills section */}
         <section id="skills" className="py-16 px-8 font-serif">
+          {/* My Skills */}
+          <div className="group">
+            <h1 className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
+              My Skills
+              <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
+            </h1>
+          </div>
+          <br /><br />
           <ScrollAnimation animateIn='bounceInRight'
             animateOut='bounceOutLeft'>
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
 
               {/* Left Side - Skills Description */}
               <div className="text-center lg:text-left">
-                <h2 className="text-4xl font-bold text-black mb-6">My Skills</h2>
                 <p className="text-xl text-black dark:text-black mb-8">
                   I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
                 </p>
@@ -337,6 +349,14 @@ function App() {
         </section>
         {/* project section */}
         <section id="project" className="py-16 px-8 text-black font-serif">
+          {/* Projects */}
+          <div className="group">
+            <h1 className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
+              My Projects
+              <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
+            </h1>
+          </div>
+          <br /><br />
           {/* first */}
           <ScrollAnimation animateIn='bounceInLeft'
             animateOut='bounceOutRight'>
@@ -496,13 +516,18 @@ function App() {
           </ScrollAnimation>
         </section>
         {/* contact section */}
-        <section>
+        <section id="contact" className="py-16 px-8 text-black font-serif">
           <ScrollAnimation animateIn='fadeIn'>
-            <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-50 flex items-center justify-center px-6 py-12">
+            <div className=" bg-gradient-to-br from-gray-100 to-blue-50 flex items-center justify-center px-6 py-12">
               <div className="bg-white shadow-lg border border-gray-200 rounded-lg p-8 w-full max-w-3xl transition-transform duration-300 hover:scale-105">
-                <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-                  Get in Touch
-                </h2>
+                {/* Contact */}
+                <div className="group">
+                  <h1 className="text-3xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
+                    Contact us
+                    <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
+                  </h1>
+                </div>
+                <br /><br />
                 <form className="space-y-6">
                   {/* First Name Field */}
                   <div>
@@ -566,6 +591,55 @@ function App() {
             </div>
           </ScrollAnimation>
         </section>
+        {/* footer section */}
+        <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+          <nav className="grid grid-flow-col gap-4">
+            <a className="link link-hover">About us</a>
+            <a className="link link-hover">Contact</a>
+            <a className="link link-hover">Jobs</a>
+            <a className="link link-hover">Press kit</a>
+          </nav>
+          <nav>
+            <div className="grid grid-flow-col gap-4">
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  className="fill-current">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  className="fill-current">
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  className="fill-current">
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+          <aside>
+            <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+          </aside>
+        </footer>
 
       </main>
     </div>
