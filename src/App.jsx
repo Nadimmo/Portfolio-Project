@@ -11,127 +11,98 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark");
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Toggle menu state
+  const Links = <>
+    {/* Center - Navigation Links */}
+      <ul className="menu menu-horizontal px-4 space-x-6 font-semibold lg:space-x-6">
+        <li>
+          <a href="/" className="relative hover:text-purple-400 group">
+            Home
+            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" className="relative hover:text-purple-400 group">
+            About
+            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#skills" className="relative hover:text-purple-400 group">
+            Skills
+            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#project" className="relative hover:text-purple-400 group">
+            Project
+            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" className="relative hover:text-purple-400 group">
+            Contact
+            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </li>
+      </ul>
+  </>
 
   return (
     <div className="bg-white">
       {/* navbar section */}
       <section className="transition-all fixed z-10 w-full">
-        <div
-          className={`navbar ${darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-900"
-            } transition-all shadow-md`}
-        >
-          {/* Left Side - Logo/Image */}
+        <div className="navbar bg-base-100">
           <div className="navbar-start">
-            <a href="/" className="flex items-center space-x-2">
-              <img
-                src="https://i.ibb.co.com/kxmnLsb/profile.jpg"
-                alt="Logo"
-                className="h-12 w-12 rounded-full border-2 border-purple-500 shadow-md"
-              />
-
-            </a>
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+               {Links}
+              </ul>
+            </div>
           </div>
-
-          {/* Center - Navigation Links */}
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-4 space-x-6 font-semibold">
-              <li>
-                <a href="/" className="relative hover:text-purple-400 group">
-                  Home
-                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="relative hover:text-purple-400 group">
-                  About
-                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#skills" className="relative hover:text-purple-400 group">
-                  Skills
-                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#project" className="relative hover:text-purple-400 group">
-                  Project
-                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="relative hover:text-purple-400 group">
-                  Contact
-                  <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </li>
+            <ul className="menu menu-horizontal px-1">
+             {Links}
             </ul>
           </div>
-
-
-          {/* Right Side - Dark/Light Mode Toggle */}
-          <div className="navbar-end">
-            <button
-              onClick={toggleDarkMode}
-              className="btn btn-outline border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white transition-all"
-            >
-              {darkMode ? (
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 inline"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 3v1m0 16v1m8.66-7.66l-.7.7M4.34 4.34l-.7.7m16 12-.7.7m-14.34 0-.7-.7m6.68-15.66a9 9 0 110 18 9 9 0 010-18z"
-                    />
-                  </svg>{" "}
-                  Light Mode
-                </span>
-              ) : (
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 inline"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 3v1m0 16v1m8.66-7.66l-.7.7M4.34 4.34l-.7.7m16 12-.7.7m-14.34 0-.7-.7m6.68-15.66a9 9 0 110 18 9 9 0 010-18z"
-                    />
-                  </svg>{" "}
-                  Dark Mode
-                </span>
-              )}
-            </button>
-          </div>
+          {/* Right Side - Profile Image */}
+        <div className="navbar-end">
+          <a href="/" className="flex items-center space-x-2">
+            <img
+              src="https://i.ibb.co.com/kxmnLsb/profile.jpg"
+              alt="Profile"
+              className="h-12 w-12 rounded-full border-2 border-purple-500 shadow-md"
+            />
+          </a>
+        </div>
         </div>
       </section>
 
       {/* main section */}
-      <main >
+      <main>
         {/* Banner Section */}
         <ScrollAnimation animateIn='fadeIn'
           animateOut='fadeOut' >
           <section className="dark:bg-gray-100 dark:text-gray-800 font-serif">
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
               {/* Text Section */}
-              <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+              <div className="lg:mt-0 mt-5 flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                 <h1 className="text-5xl font-bold leading-none sm:text-6xl">
                   Hi, I'm
                   <span className="dark:text-violet-600"> Nadim Mostofa</span>
@@ -169,8 +140,8 @@ function App() {
         <br /><br />
         {/* about section */}
         <section id="about" className="py-16 px-8 mt-10 text-black font-mono">
-          <ScrollAnimation animateIn='bounceInLeft'
-            animateOut='bounceOutRight'>
+          <ScrollAnimation animateIn='fadeIn'
+          animateOut='fadeOut'>
             <div className="max-w-7xl mx-auto text-center">
               <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
               <p className="text-xl  mb-8">
@@ -242,8 +213,8 @@ function App() {
             </h1>
           </div>
           <br /><br />
-          <ScrollAnimation animateIn='bounceInRight'
-            animateOut='bounceOutLeft'>
+          <ScrollAnimation animateIn='fadeIn'
+          animateOut='fadeOut'>
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
 
               {/* Left Side - Skills Description */}
@@ -360,7 +331,7 @@ function App() {
           {/* first */}
           <ScrollAnimation animateIn='bounceInLeft'
             animateOut='bounceOutRight'>
-            <div className="container mx-auto">
+            <div className="container mx-auto lg:mt-0 mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Project Image */}
                 <div className="relative w-full h-64 md:h-80 flex justify-center items-center">
@@ -400,7 +371,7 @@ function App() {
           <ScrollAnimation animateIn='bounceInRight'
             animateOut='bounceOutLeft'>
             {/* second */}
-            <div className="container mx-auto">
+            <div className="container mx-auto lg:mt-0 mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Project Title and Description */}
                 <div className="space-y-4 text-center md:text-left">
@@ -440,7 +411,7 @@ function App() {
           {/* third */}
           <ScrollAnimation animateIn='bounceInLeft'
             animateOut='bounceOutRight'>
-            <div className="container mx-auto">
+            <div className="container mx-auto lg:mt-0 mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Project Image */}
                 <div className="relative w-full h-64 md:h-80 flex justify-center items-center">
@@ -479,7 +450,7 @@ function App() {
           {/* four */}
           <ScrollAnimation animateIn='bounceInRight'
             animateOut='bounceOutLeft'>
-            <div className="container mx-auto">
+            <div className="container mx-auto lg:mt-0 mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 {/* Left Side - Project Title and Description */}
                 <div className="space-y-4 text-center md:text-left">
