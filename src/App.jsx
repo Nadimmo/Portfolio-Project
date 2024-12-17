@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +10,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Toggle menu state
   const Links = <>
     {/* Center - Navigation Links */}
       <ul className="menu menu-horizontal px-4 space-x-6 font-semibold lg:space-x-6">
