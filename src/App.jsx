@@ -6,45 +6,84 @@ import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { BiLogoMongodb } from "react-icons/bi";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useRef } from 'react';
+import Swal from 'sweetalert2';
+import axios from 'axios';
 
 
 
 function App() {
   const Links = <>
     {/* Center - Navigation Links */}
-      <ul className="menu menu-horizontal px-4 space-x-6 font-semibold lg:space-x-6">
-        <li>
-          <a href="/" className="relative hover:text-purple-400 group">
-            Home
-            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#about" className="relative hover:text-purple-400 group">
-            About
-            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#skills" className="relative hover:text-purple-400 group">
-            Skills
-            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#project" className="relative hover:text-purple-400 group">
-            Project
-            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#contact" className="relative hover:text-purple-400 group">
-            Contact
-            <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </li>
-      </ul>
+    <ul className="menu menu-horizontal px-4 space-x-6 font-semibold lg:space-x-6">
+      <li>
+        <a href="/" className="relative hover:text-purple-400 group">
+          Home
+          <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#about" className="relative hover:text-purple-400 group">
+          About
+          <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#skills" className="relative hover:text-purple-400 group">
+          Skills
+          <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#project" className="relative hover:text-purple-400 group">
+          Project
+          <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" className="relative hover:text-purple-400 group">
+          Contact
+          <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+    </ul>
   </>
+
+  const formRef = useRef(); // Reference to the form
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxlsBv-ardvGBSn1mtfZxVCPKBkkWsJB0rPadtS_ZOPLIjh5aJvthXbDQvdpn_6LBmH5g/exec"; // Replace with your script URL
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form behavior
+
+    const form = formRef.current; // Get the form DOM element
+    const formData = new FormData(form); // Create FormData object
+
+    try {
+      // Send form data to Google Sheets using Axios
+      await axios.post(scriptURL, formData);
+
+      // Success alert
+      Swal.fire({
+        title: "Success!",
+        text: "Your message has been sent successfully.",
+        icon: "success",
+        confirmButtonColor: "#3085d6",
+      });
+
+      form.reset(); // Clear form fields
+    } catch (error) {
+      console.error("Error!", error.message);
+
+      // Error alert
+      Swal.fire({
+        title: "Error!",
+        text: "Something went wrong. Please try again.",
+        icon: "error",
+        confirmButtonColor: "#d33",
+      });
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -70,25 +109,25 @@ function App() {
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-               {Links}
+                {Links}
               </ul>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
-             {Links}
+              {Links}
             </ul>
           </div>
           {/* Right Side - Profile Image */}
-        <div className="navbar-end">
-          <a href="/" className="flex items-center space-x-2">
-            <img
-              src="https://i.ibb.co.com/kxmnLsb/profile.jpg"
-              alt="Profile"
-              className="h-12 w-12 rounded-full border-2 border-purple-500 shadow-md"
-            />
-          </a>
-        </div>
+          <div className="navbar-end">
+            <a href="/" className="flex items-center space-x-2">
+              <img
+                src="https://i.ibb.co.com/kxmnLsb/profile.jpg"
+                alt="Profile"
+                className="h-12 w-12 rounded-full border-2 border-purple-500 shadow-md"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -139,7 +178,7 @@ function App() {
         {/* about section */}
         <section id="about" className="py-16 px-8 mt-10 text-black font-mono">
           <ScrollAnimation animateIn='fadeIn'
-          animateOut='fadeOut'>
+            animateOut='fadeOut'>
             <div className="max-w-7xl mx-auto text-center">
               <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
               <p className="text-xl  mb-8">
@@ -212,7 +251,7 @@ function App() {
           </div>
           <br /><br />
           <ScrollAnimation animateIn='fadeIn'
-          animateOut='fadeOut'>
+            animateOut='fadeOut'>
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
 
               {/* Left Side - Skills Description */}
@@ -497,52 +536,54 @@ function App() {
                   </h1>
                 </div>
                 <br /><br />
-                <form className="space-y-6">
-                  {/* First Name Field */}
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                  name="submit-to-google-sheet"
+                >
+                  {/* First Name */}
                   <div>
-                    <label
-                      htmlFor="firstName"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
                       First Name
                     </label>
                     <input
                       type="text"
+                      name="firstName"
                       id="firstName"
                       placeholder="Enter your first name"
-                      className="mt-1 block w-full rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3 transition-all duration-200 ease-in-out hover:border-blue-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                      required
                     />
                   </div>
 
-                  {/* Email Field */}
+                  {/* Email */}
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                       Email
                     </label>
                     <input
                       type="email"
+                      name="email"
                       id="email"
                       placeholder="Enter your email"
-                      className="mt-1 block w-full rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3 transition-all duration-200 ease-in-out hover:border-blue-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                      required
                     />
                   </div>
 
-                  {/* Message Field */}
+                  {/* Message */}
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700"
-                    >
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                       Message
                     </label>
                     <textarea
+                      name="message"
                       id="message"
                       rows="4"
                       placeholder="Enter your message"
-                      className="mt-1 block w-full rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3 transition-all duration-200 ease-in-out hover:border-blue-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                      required
                     ></textarea>
                   </div>
 
@@ -550,7 +591,7 @@ function App() {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl transform hover:scale-105"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-transform transform hover:scale-105"
                     >
                       Send Message
                     </button>

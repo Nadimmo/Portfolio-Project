@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/material": "^6.2.0",
     "animate.css": "^4.1.1",
+    "axios": "^1.7.9",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
     "mouse-follower": "^1.1.2",
@@ -29,7 +30,8 @@
     "react-scroll": "^1.9.0",
     "react-scroll-parallax": "^3.4.5",
     "react-tabs": "^6.0.2",
-    "sort-by": "^0.0.2"
+    "sort-by": "^0.0.2",
+    "sweetalert2": "^11.15.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
