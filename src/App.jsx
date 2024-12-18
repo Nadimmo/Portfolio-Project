@@ -1,8 +1,8 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faJs, faNodeJs, faGitAlt, faGithub, faAws, faDocker, faBootstrap } from '@fortawesome/free-brands-svg-icons';
-import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faNodeJs, faGitAlt, faGithub, faAws, faDocker, faBootstrap, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faLaptopCode, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { BiLogoMongodb } from "react-icons/bi";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -555,82 +555,150 @@ function App() {
         </section>
         {/* contact section */}
         <section id="contact" className="py-16 px-8 text-black font-serif">
-          <ScrollAnimation animateIn='fadeIn'>
-            <div className=" bg-gradient-to-br from-gray-100 to-blue-50 flex items-center justify-center px-6 py-12">
-              <div className="bg-white shadow-lg border border-gray-200 rounded-lg p-8 w-full max-w-3xl transition-transform duration-300 hover:scale-105">
-                {/* Contact */}
-                <div className="group">
-                  <h1 className="text-3xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
-                    Contact us
-                    <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
-                  </h1>
-                </div>
-                <br /><br />
-                <form
-                  ref={formRef}
-                  onSubmit={handleSubmit}
-                  className="space-y-6"
-                  name="submit-to-google-sheet"
-                >
-                  {/* First Name */}
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      name="firstName"
-                      id="firstName"
-                      placeholder="Enter your first name"
-                      className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
-                      required
-                    />
+          <ScrollAnimation animateIn="fadeIn">
+            <div className="bg-gradient-to-br from-gray-100 to-blue-50 flex items-center justify-center px-6 py-12">
+              <div className="bg-white shadow-lg border border-gray-200 rounded-lg p-8 w-full max-w-5xl transition-transform duration-300 hover:scale-105 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Left Side - Contact Info */}
+                <div className="space-y-6">
+                  <h2 className="text-3xl font-bold text-gray-800">Get in Touch</h2>
+                  <p className="text-gray-700">
+                    I’m here to help! Reach out to me for any queries, collaborations, or project discussions.
+                  </p>
+
+                  <div className="space-y-4">
+                    {/* Phone */}
+                    <div className="flex items-center space-x-4">
+                      <FontAwesomeIcon icon={faPhone} className="text-blue-600 text-2xl" />
+                      <span className="text-gray-800">+880 1756790052</span>
+                    </div>
+
+                    {/* Email */}
+                    <div className="flex items-center space-x-4">
+                      <FontAwesomeIcon icon={faEnvelope} className="text-blue-600 text-2xl" />
+                      <span className="text-gray-800">nadimmostafa334@email.com</span>
+                    </div>
+
+                    {/* Address */}
+                    <div className="flex items-center space-x-4">
+                      <FontAwesomeIcon icon={faMapMarkerAlt} className="text-blue-600 text-2xl" />
+                      <span className="text-gray-800">Rangpur City, Bangladesh</span>
+                    </div>
                   </div>
 
-                  {/* Email */}
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Enter your email"
-                      className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
-                      required
-                    />
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                      Message
-                    </label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      rows="4"
-                      placeholder="Enter your message"
-                      className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
-                      required
-                    ></textarea>
-                  </div>
-
-                  {/* Submit Button */}
-                  <div>
-                    <button
-                      type="submit"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-transform transform hover:scale-105"
+                  {/* Social Media Icons */}
+                  <div className="flex space-x-6 mt-6">
+                    <a
+                      href="https://github.com/Nadimmo?tab=overview&from=2024-12-01&to=2024-12-1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-blue-600 text-2xl transition"
                     >
-                      Send Message
-                    </button>
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/md-nadim-mostofa-931a48247"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-blue-600 text-2xl transition"
+                    >
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100033618980505"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-blue-600 text-2xl transition"
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
                   </div>
-                </form>
+
+                  {/* Download CV Button */}
+                  <a
+                    href="/path-to-your-cv.pdf"
+                    download
+                    className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
+                  >
+                    Download CV
+                  </a>
+                </div>
+
+                {/* Right Side - Contact Form */}
+                <div>
+                  <div className="group">
+                    <h1 className="text-3xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
+                      Contact Us
+                      <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
+                    </h1>
+                  </div>
+                  <br /><br />
+                  <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                    name="submit-to-google-sheet"
+                  >
+                    {/* First Name */}
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        id="firstName"
+                        placeholder="Enter your first name"
+                        className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                        required
+                      />
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                        required
+                      />
+                    </div>
+
+                    {/* Message */}
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                        Message
+                      </label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        rows="4"
+                        placeholder="Enter your message"
+                        className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                        required
+                      ></textarea>
+                    </div>
+
+                    {/* Submit Button */}
+                    <div>
+                      <button
+                        type="submit"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-transform transform hover:scale-105"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </ScrollAnimation>
         </section>
+
         {/* footer section */}
         <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
           <nav className="grid grid-flow-col gap-4">
