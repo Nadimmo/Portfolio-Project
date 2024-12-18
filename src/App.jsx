@@ -9,8 +9,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useRef } from 'react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 
@@ -613,17 +612,17 @@ function App() {
           </nav>
           <nav>
             <div className="grid grid-flow-col gap-4">
-              <a>
+              <a href='https://www.facebook.com/profile.php?id=100033618980505' target='_blank' className='text-2xl hover:cursor-pointer hover:text-violet-500'>
                 <FaFacebook />
               </a>
-              <a>
+              <a href='https://www.linkedin.com/in/md-nadim-mostofa-931a48247' target='_blank' className='text-2xl hover:cursor-pointer hover:text-violet-500'>
                 <FaLinkedin />
               </a>
-              <a>
+              <a href='https://github.com/Nadimmo?tab=overview&from=2024-12-01&to=2024-12-18' target='_blank' className='text-2xl hover:cursor-pointer hover:text-violet-500'>
                 <FaGithub />
               </a>
-              <a>
-              <MdEmail />
+              <a href='' target='_blank' className='text-2xl hover:cursor-pointer hover:text-violet-500'>
+              <FaInstagram />
               </a>
             </div>
           </nav>
