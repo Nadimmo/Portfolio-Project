@@ -9,6 +9,8 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useRef } from 'react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 
 
@@ -177,8 +179,8 @@ function App() {
         <br /><br />
         {/* about section */}
         <section id="about" className="py-16 px-8 mt-10 text-black font-mono">
-          <ScrollAnimation animateIn='fadeIn'
-            animateOut='fadeOut'>
+          <ScrollAnimation  animateIn='fadeIn'
+              animateOut='fadeOut'>
             <div className="max-w-7xl mx-auto text-center">
               <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
               <p className="text-xl  mb-8">
@@ -242,117 +244,117 @@ function App() {
         <br /><br />
         {/* skills section */}
         <section id="skills" className="py-16 px-8 font-serif">
-          {/* My Skills */}
-          <div className="group">
-            <h1 className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
-              My Skills
-              <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
-            </h1>
-          </div>
-          <br /><br />
-          <ScrollAnimation animateIn='fadeIn'
-            animateOut='fadeOut'>
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <ScrollAnimation  animateIn='fadeIn'
+              animateOut='fadeOut'>
+            {/* My Skills */}
+            <div className="group">
+              <h1 className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
+                My Skills
+                <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
+              </h1>
+            </div>
+            <br /><br />
+              <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
 
-              {/* Left Side - Skills Description */}
-              <div className="text-center lg:text-left">
-                <p className="text-xl text-black dark:text-black mb-8">
-                  I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
-                </p>
+                {/* Left Side - Skills Description */}
+                <div className="text-center lg:text-left">
+                  <p className="text-xl text-black dark:text-black mb-8">
+                    I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
+                  </p>
 
-                <ul className="text-lg text-black dark:text-black space-y-4">
-                  <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap</li>
-                  <li><strong>Back-End Development:</strong> Node.js, Express.js</li>
-                  <li><strong>Databases:</strong> MongoDB</li>
-                  <li><strong>APIs:</strong> REST APIs</li>
-                  <li><strong>Project Management:</strong> Proven ability to manage and deliver projects efficiently</li>
-                  <li><strong>Networking:</strong> Good experience in networking</li>
-                  <li><strong>Other's:</strong> Git and  GitHub Project Collaboration, AWS, Docker</li>
-                </ul>
-              </div>
+                  <ul className="text-lg text-black dark:text-black space-y-4">
+                    <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap</li>
+                    <li><strong>Back-End Development:</strong> Node.js, Express.js</li>
+                    <li><strong>Databases:</strong> MongoDB</li>
+                    <li><strong>APIs:</strong> REST APIs</li>
+                    <li><strong>Project Management:</strong> Proven ability to manage and deliver projects efficiently</li>
+                    <li><strong>Networking:</strong> Good experience in networking</li>
+                    <li><strong>Other's:</strong> Git and  GitHub Project Collaboration, AWS, Docker</li>
+                  </ul>
+                </div>
 
-              {/* Right Side - Icons */}
-              <div className="text-center">
-                <h3 className="text-3xl font-semibold text-black mb-6">Technologies</h3>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12">
+                {/* Right Side - Icons */}
+                <div className="text-center">
+                  <h3 className="text-3xl font-semibold text-black mb-6">Technologies</h3>
+                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12">
 
-                  {/* Front-End Icons */}
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faHtml5} />
+                    {/* Front-End Icons */}
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faHtml5} />
+                      </div>
+                      <p className="text-lg text-black">HTML5</p>
                     </div>
-                    <p className="text-lg text-black">HTML5</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faCss3Alt} />
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faCss3Alt} />
+                      </div>
+                      <p className="text-lg text-black">CSS3</p>
                     </div>
-                    <p className="text-lg text-black">CSS3</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faJs} />
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faJs} />
+                      </div>
+                      <p className="text-lg text-black">JavaScript</p>
                     </div>
-                    <p className="text-lg text-black">JavaScript</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faReact} />
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faReact} />
+                      </div>
+                      <p className="text-lg text-black">React.js</p>
                     </div>
-                    <p className="text-lg text-black">React.js</p>
-                  </div>
 
-                  {/* Back-End Icons */}
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faNodeJs} />
+                    {/* Back-End Icons */}
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faNodeJs} />
+                      </div>
+                      <p className="text-lg text-black">Node.js</p>
                     </div>
-                    <p className="text-lg text-black">Node.js</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <BiLogoMongodb />
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <BiLogoMongodb />
+                      </div>
+                      <p className="text-lg text-black">MongoDB</p>
                     </div>
-                    <p className="text-lg text-black">MongoDB</p>
-                  </div>
 
-                  {/* Version Control Icons */}
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faGitAlt} />
+                    {/* Version Control Icons */}
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faGitAlt} />
+                      </div>
+                      <p className="text-lg text-black">Git</p>
                     </div>
-                    <p className="text-lg text-black">Git</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faGithub} />
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faGithub} />
+                      </div>
+                      <p className="text-lg text-black">GitHub</p>
                     </div>
-                    <p className="text-lg text-black">GitHub</p>
-                  </div>
 
-                  {/* Other Skills */}
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faAws} />
+                    {/* Other Skills */}
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faAws} />
+                      </div>
+                      <p className="text-lg text-black">AWS</p>
                     </div>
-                    <p className="text-lg text-black">AWS</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faDocker} />
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faDocker} />
+                      </div>
+                      <p className="text-lg text-black">Docker</p>
                     </div>
-                    <p className="text-lg text-black">Docker</p>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
-                      <FontAwesomeIcon icon={faBootstrap} />
+                    <div className="flex flex-col items-center">
+                      <div className="text-4xl mb-4 text-gray-500 hover:cursor-pointer hover:text-violet-600 transition-transform transform hover:scale-125">
+                        <FontAwesomeIcon icon={faBootstrap} />
+                      </div>
+                      <p className="text-lg text-black">Bootstrap</p>
                     </div>
-                    <p className="text-lg text-black">Bootstrap</p>
                   </div>
                 </div>
-              </div>
 
-            </div>
+              </div>
           </ScrollAnimation>
         </section>
         {/* project section */}
@@ -604,50 +606,29 @@ function App() {
         {/* footer section */}
         <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
           <nav className="grid grid-flow-col gap-4">
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <a href='/#about' className="link link-hover">About us</a>
+            <a href='/#skills' className="link link-hover">Skills</a>
+            <a href='/#project' className="link link-hover">Project</a>
+            <a href='/#contact' className="link link-hover">Contact</a>
           </nav>
           <nav>
             <div className="grid grid-flow-col gap-4">
               <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current">
-                  <path
-                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                </svg>
+                <FaFacebook />
               </a>
               <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current">
-                  <path
-                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                </svg>
+                <FaLinkedin />
               </a>
               <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current">
-                  <path
-                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                </svg>
+                <FaGithub />
+              </a>
+              <a>
+              <MdEmail />
               </a>
             </div>
           </nav>
           <aside>
-            <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+            <p>Copyright © {new Date().getFullYear()} - All right reserved by Nadim Mostofa</p>
           </aside>
         </footer>
 
