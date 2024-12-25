@@ -301,7 +301,13 @@ function App() {
                 <li><strong>APIs:</strong> REST APIs</li>
                 <li><strong>Project Management:</strong> Proven ability to manage and deliver projects efficiently</li>
                 <li><strong>Networking:</strong> Good experience in networking</li>
-                <li><strong>Other's:</strong> Git and GitHub Project Collaboration, AWS, Docker</li>
+                <li><strong>Version Control:</strong> Ensuring efficient collaboration and tracking with Git and GitHub, maintaining clear and organized project workflows.
+                </li>
+                <li><strong>Responsive Design:</strong> Ensuring websites look and function flawlessly across all devices and screen sizes.
+                </li>
+                <li><strong>Deployment:</strong> Assisting with deploying web applications on platforms like GitHub Page, Netlify, Vercel, and Firebase 
+
+                </li>
               </ul>
             </motion.div>
 
@@ -615,7 +621,7 @@ function App() {
 
                   {/* Download CV Button */}
                   <a
-                    href="/path-to-your-cv.pdf"
+                    href="Professional Resume.pdf"
                     download
                     className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
                   >
