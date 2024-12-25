@@ -305,7 +305,7 @@ function App() {
                 </li>
                 <li><strong>Responsive Design:</strong> Ensuring websites look and function flawlessly across all devices and screen sizes.
                 </li>
-                <li><strong>Deployment:</strong> Assisting with deploying web applications on platforms like GitHub Page, Netlify, Vercel, and Firebase 
+                <li><strong>Deployment:</strong> Assisting with deploying web applications on platforms like GitHub Page, Netlify, Vercel, and Firebase
 
                 </li>
               </ul>
@@ -620,13 +620,16 @@ function App() {
                   </div>
 
                   {/* Download CV Button */}
+                  {/* Download CV Button */}
                   <a
-                    href="Professional Resume.pdf"
-                    download
-                    className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
+                    href="https://docs.google.com/document/d/1ng98B1qSjpzntnVEmlDfk2oKD3jCX46dS89SuNcCjLc/edit?usp=sharing" // Corrected file path with a leading slash
+                    download // Specifies the downloaded file name
+                    target='_blank'
+                    className="inline-block  mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
                   >
-                    Download CV
+                    View Resume
                   </a>
+
                 </div>
 
                 {/* Right Side - Contact Form */}
