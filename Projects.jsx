@@ -14,7 +14,7 @@ const Projects = () => {
       ],
       link: "https://beauty-parlour-ten.vercel.app/",
       image: "https://i.ibb.co.com/f4f70bj/Beauty-Parlor.png",
-      animate: { initialX: -100 },
+      animate: { initialX: 100 },
     },
     {
       title: "Survey Pro",
@@ -40,7 +40,7 @@ const Projects = () => {
       ],
       link: "https://cylist-club.web.app/",
       image: "https://i.ibb.co.com/yyqK9S2/cycle.png",
-      animate: { initialX: -100 },
+      animate: { initialX: 100 },
     },
     {
       title: "Doctor House",
@@ -81,22 +81,22 @@ const Projects = () => {
       </div>
 
       {/* Projects List */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="lg:max-w-7xl mx-auto lg:grid grid-cols-2 gap-12 ">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 lg:mt-0 mt-4"
             initial={{ opacity: 0, x: project.animate.initialX }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.8 }}
             transition={{ duration: 0.7, delay: index * 0.2 }}
           >
             {/* Project Image */}
-            <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden group">
+            <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden group lg:mt-0 mt-4">
               <img
                 src={project.image}
                 alt={`${project.title} Screenshot`}
-                className="w-full h-full object-cover group-hover:opacity-40 transition-opacity duration-300"
+                className="w-full h-full object-cover group-hover:opacity-40 transition-opacity duration-300 p-2"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a

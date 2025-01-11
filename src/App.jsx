@@ -287,7 +287,7 @@ function App() {
             {/* Left Side - Skills Description */}
             <motion.div
               className="text-center lg:text-left"
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.8 }}
               transition={{ duration: 0.6 }}
