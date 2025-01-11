@@ -91,7 +91,7 @@ function App() {
     <div className="bg-white">
       {/* navbar section */}
       <section className="transition-all fixed z-10 w-full">
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-[#E8F5E9]">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -110,7 +110,7 @@ function App() {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                className="menu menu-sm dropdown-content bg-[#E8F5E9] rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 {Links}
               </ul>
             </div>
@@ -137,12 +137,12 @@ function App() {
       <main>
         {/* Banner Section */}
         <motion.section
-          className="dark:bg-gray-100 dark:text-gray-800 font-serif"
+          className="dark:bg-[#90CAF9] dark:text-gray-900 font-serif"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+          <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between ">
             {/* Text Section */}
             <motion.div
               className="lg:mt-0 mt-5 flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
@@ -194,7 +194,7 @@ function App() {
         </motion.section>
         <br /><br />
         {/* about section */}
-        <section id="about" className="py-16 px-8 mt-10 text-black font-mono">
+        <section id="about" className="py-16 px-8 mt-10 text-black ">
           <Fade bottom cascade>
             <div className="max-w-7xl mx-auto text-center">
               <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
@@ -264,7 +264,7 @@ function App() {
         </section>
         <br /><br />
         {/* skills section */}
-        <section id="skills" className="py-16 px-8 font-serif">
+        <section id="skills" className="py-16 px-8 ">
           <div className="group">
             <motion.h1
               className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer"
@@ -294,20 +294,13 @@ function App() {
               <p className="text-xl text-black dark:text-black mb-8">
                 I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
               </p>
-              <ul className="text-lg text-black dark:text-black space-y-4">
-                <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap</li>
+              <ul className="text-lg text-gray-600 space-y-4">
+                <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap and React.js</li>
                 <li><strong>Back-End Development:</strong> Node.js, Express.js</li>
                 <li><strong>Databases:</strong> MongoDB</li>
                 <li><strong>APIs:</strong> REST APIs</li>
-                <li><strong>Project Management:</strong> Proven ability to manage and deliver projects efficiently</li>
-                <li><strong>Networking:</strong> Good experience in networking</li>
-                <li><strong>Version Control:</strong> Ensuring efficient collaboration and tracking with Git and GitHub, maintaining clear and organized project workflows.
-                </li>
-                <li><strong>Responsive Design:</strong> Ensuring websites look and function flawlessly across all devices and screen sizes.
-                </li>
-                <li><strong>Deployment:</strong> Assisting with deploying web applications on platforms like GitHub Page, Netlify, Vercel, and Firebase
-
-                </li>
+                <li><strong>Version Control:</strong> Git & GitHub</li>
+                <li><strong>Deployment:</strong> GitHub Page, Vercel, Netlify and Firebase</li>
               </ul>
             </motion.div>
 
@@ -409,18 +402,6 @@ function App() {
                   </div>
                   <p className="text-lg text-black">GitHub</p>
                 </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faAws} />
-                  </div>
-                  <p className="text-lg text-black">AWS</p>
-                </motion.div>
-
                 <motion.div
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2, rotate: 5 }}
@@ -447,7 +428,7 @@ function App() {
           </div>
         </section>
         {/* project section */}
-        <section id="project" className="py-16 px-8 text-black font-serif">
+        <section id="project" className="py-16 px-8 text-black bg-[#E3F2FD] ">
           {/* Projects Header */}
           <div className="group">
             <motion.h1
@@ -560,9 +541,9 @@ function App() {
           ))}
         </section>
         {/* contact section */}
-        <section id="contact" className="py-16 px-8 text-black font-serif">
+        <section id="contact" className="py-16 px-8 text-black ">
           <ScrollAnimation animateIn="fadeIn">
-            <div className="bg-gradient-to-br from-gray-100 to-blue-50 flex items-center justify-center px-6 py-12">
+            <div className=" flex items-center justify-center px-6 py-12">
               <div className="bg-white shadow-lg border border-gray-200 rounded-lg p-8 w-full max-w-5xl transition-transform duration-300 hover:scale-105 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left Side - Contact Info */}
                 <div className="space-y-6">
@@ -709,7 +690,7 @@ function App() {
         </section>
 
         {/* footer section */}
-        <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+        <footer className="footer footer-center bg-[#E8F5E9] text-base-content rounded p-10">
           <nav className="grid grid-flow-col gap-4">
             <a href='/#about' className="link link-hover">About us</a>
             <a href='/#skills' className="link link-hover">Skills</a>
