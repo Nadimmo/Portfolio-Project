@@ -12,6 +12,7 @@ import axios from 'axios';
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
+import Projects from '../Projects';
 
 
 function App() {
@@ -428,118 +429,7 @@ function App() {
           </div>
         </section>
         {/* project section */}
-        <section id="project" className="py-16 px-8 text-black bg-[#E3F2FD] ">
-          {/* Projects Header */}
-          <div className="group">
-            <motion.h1
-              className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer"
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.8 }}
-              transition={{ duration: 0.5 }}
-            >
-              My Projects
-              <motion.span
-                className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0"
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.3 }}
-              ></motion.span>
-            </motion.h1>
-          </div>
-          <br />
-          <br />
-
-          {/* Projects List */}
-          {[
-            {
-              title: "Survey Pro",
-              description:
-                "At SurveyPro, we empower businesses and individuals to gather insights effortlessly. Whether you're conducting market research, gathering employee feedback, or exploring new trends, our tools are designed to make your surveys seamless and impactful.",
-              link: "https://assignment-12-6f33b.web.app",
-              image: "https://i.ibb.co.com/cFVrVMK/First.png",
-              animate: { initialX: -100 },
-            },
-            {
-              title: "Cyclist Club",
-              description:
-                "Racing is still encouraged and remains an important part of the Team. Members are welcome to race if they choose to do so.",
-              link: "https://cylist-club.web.app",
-              image: "https://i.ibb.co.com/cYmKjXp/Second.png",
-              animate: { initialX: 100 },
-            },
-            {
-              title: "Doctor House",
-              description:
-                "At Doctor House, we combine medical expertise, state-of-the-art facilities, and heartfelt compassion to ensure the best healthcare experience for you.",
-              link: "https://doctorhouse-259ce.web.app",
-              image: "https://i.ibb.co.com/f9W3jWZ/Third.png",
-              animate: { initialX: -100 },
-            },
-            {
-              title: "Tech Job Fair",
-              description:
-                "Join TechJobFair, the ultimate event for tech professionals and companies! Connect with top employers, explore cutting-edge technologies, and discover exciting career opportunities.",
-              link: "https://assignment-11-7d11c.web.app",
-              image: "https://i.ibb.co.com/0YPXvr7/Four.png",
-              animate: { initialX: 100 },
-            },
-          ].map((project, index) => (
-            <motion.div
-              key={index}
-              className="container mx-auto lg:mt-0 mt-4"
-              initial={{ opacity: 0, x: project.animate.initialX }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.8 }}
-              transition={{ duration: 0.7, delay: index * 0.2 }}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                {/* Left or Right Side - Project Image */}
-                {index % 2 === 0 && (
-                  <div className="relative w-full h-64 md:h-80 flex justify-center items-center">
-                    <div className="w-[90%] h-[80%] bg-black rounded-md relative shadow-lg overflow-hidden">
-                      <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
-                        <img
-                          src={project.image}
-                          alt={`${project.title} Screenshot`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Left or Right Side - Project Details */}
-                <div className="space-y-4 text-center md:text-left">
-                  <h2 className="text-2xl font-bold">{project.title}</h2>
-                  <p className="text-black">{project.description}</p>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-6 py-2 text-violet-600 border border-violet-600 rounded-lg hover:bg-violet-600 hover:text-white transition-all"
-                  >
-                    Live Preview
-                  </a>
-                </div>
-
-                {/* Alternating Image and Details */}
-                {index % 2 !== 0 && (
-                  <div className="relative w-full h-64 md:h-80 flex justify-center items-center">
-                    <div className="w-[90%] h-[80%] bg-black rounded-md relative shadow-lg overflow-hidden">
-                      <div className="absolute inset-0 top-[8%] bottom-[8%] left-[4%] right-[4%] bg-gray-300 rounded-md overflow-hidden">
-                        <img
-                          src={project.image}
-                          alt={`${project.title} Screenshot`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </section>
+        <Projects></Projects>
         {/* contact section */}
         <section id="contact" className="py-16 px-8 text-black ">
           <ScrollAnimation animateIn="fadeIn">
