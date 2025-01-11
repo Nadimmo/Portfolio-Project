@@ -81,7 +81,7 @@ const Projects = () => {
       </div>
 
       {/* Projects List */}
-      <div className="lg:max-w-7xl mx-auto lg:grid grid-cols-2 gap-12 ">
+      <div className="max-w-7xl mx-auto lg:grid grid-cols-2 gap-12 ">
         {projects.map((project, index) => (
           <motion.div
             key={index}

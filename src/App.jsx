@@ -1,8 +1,8 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faJs, faNodeJs, faGitAlt, faGithub, faAws, faDocker, faBootstrap, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faLaptopCode, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faNodeJs, faGitAlt, faGithub, faAws, faDocker, faBootstrap, faLinkedin, faFacebook, faMonero } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faEnvelope, faLaptopCode, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { BiLogoMongodb } from "react-icons/bi";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -169,7 +169,7 @@ function App() {
                 </a>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="#contact"
                   className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-white transition-all"
                 >
                   Contact Me
@@ -195,24 +195,36 @@ function App() {
         </motion.section>
         <br /><br />
         {/* about section */}
-        <section id="about" className="py-16 px-8 mt-10 text-black ">
+        <section id="about" className="py-16 px-8 mt-10 text-black bg-gradient-to-b from-violet-50 to-blue-50">
           <Fade bottom cascade>
             <div className="max-w-7xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-violet-600 mb-6">About Me</h2>
-              <p className="text-xl mb-8">
-                Hi! I'm Nadim Mostofa, and I specialize in web development. Here’s a little more about me and my educational journey.
+              {/* Section Title */}
+              <h2 className="text-4xl font-bold text-violet-600 mb-6">
+                About Me
+              </h2>
+              <p className="text-xl text-gray-700 mb-10 leading-relaxed">
+                Hi! I'm <span className="text-violet-600 font-bold">Nadim Mostofa</span>, a passionate web developer. Here's a glimpse of my educational journey, expertise, and academic highlights.
               </p>
 
               <Tabs>
-                <TabList className="flex justify-center space-x-6 mb-8">
-                  <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                {/* Tab List */}
+                <TabList className="flex justify-center space-x-4 md:space-x-6 mb-8">
+                  <Tab
+                    className="cursor-pointer py-2 px-6 rounded-md text-gray-600 font-medium bg-white shadow-md hover:text-white hover:bg-violet-600 transition-all"
+                    selectedClassName="bg-violet-600 text-white"
+                  >
                     Education
                   </Tab>
-                  <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                  <Tab
+                    className="cursor-pointer py-2 px-6 rounded-md text-gray-600 font-medium bg-white shadow-md hover:text-white hover:bg-violet-600 transition-all"
+                    selectedClassName="bg-violet-600 text-white"
+                  >
                     Academics
                   </Tab>
-                  {/* Added Expertise Tab */}
-                  <Tab className="cursor-pointer py-2 px-4 rounded-md hover:text-white hover:bg-violet-600 transition-all">
+                  <Tab
+                    className="cursor-pointer py-2 px-6 rounded-md text-gray-600 font-medium bg-white shadow-md hover:text-white hover:bg-violet-600 transition-all"
+                    selectedClassName="bg-violet-600 text-white"
+                  >
                     Expertise
                   </Tab>
                 </TabList>
@@ -221,11 +233,23 @@ function App() {
                 <TabPanel>
                   <Fade bottom>
                     <div className="text-center">
-                      <h3 className="text-2xl font-semibold text-violet-500 mb-4">Education</h3>
-                      <p className="text-lg">
-                        I completed my <strong>SSC</strong> at <strong>Rangpur Technical School & College</strong> in the session 2019-2020, specializing in <strong>Civil Drafting with CAD</strong>.
-                        My GPA was <strong>4.75</strong>. Currently, I'm pursuing my <strong>Diploma in Engineering</strong> at <strong>Kurigram Polytechnic Institute</strong>, with a major in <strong>Computer Science and Technology</strong>.
-                        I will complete my diploma in <strong>2025</strong> and am currently in my <strong>6th semester</strong>.
+                      <h3 className="text-3xl font-bold text-violet-600 mb-4">
+                        My Education
+                      </h3>
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        I completed my <strong>SSC</strong> at{" "}
+                        <span className="text-violet-500">
+                          Rangpur Technical School & College
+                        </span>{" "}
+                        (2019-2020), specializing in{" "}
+                        <strong>Civil Drafting with CAD</strong> with a GPA of{" "}
+                        <strong>4.75</strong>. <br /> Currently, I'm pursuing a{" "}
+                        <strong>Diploma in Engineering</strong> at{" "}
+                        <span className="text-violet-500">
+                          Kurigram Polytechnic Institute
+                        </span>{" "}
+                        in <strong>Computer Science and Technology</strong>, set to
+                        graduate in <strong>2025</strong>.
                       </p>
                     </div>
                   </Fade>
@@ -235,11 +259,16 @@ function App() {
                 <TabPanel>
                   <Fade bottom>
                     <div className="text-center">
-                      <h3 className="text-2xl font-semibold text-violet-500 mb-4">Academic Achievements</h3>
-                      <p className="text-lg">
-                        Throughout my academic career, I have developed a strong interest in technology, especially in programming and web development.
-                        I have successfully completed my 5th semester exams and am preparing for the 6th semester.
-                        I'm always looking for ways to improve my skills and gain practical knowledge.
+                      <h3 className="text-3xl font-bold text-violet-600 mb-4">
+                        Academic Achievements
+                      </h3>
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        I've consistently excelled in academics, showcasing a strong
+                        passion for technology, programming, and web development. I
+                        have successfully completed my <strong>6th semester</strong>{" "}
+                        exams and am currently advancing through the{" "}
+                        <strong>7th semester</strong>, focusing on hands-on projects
+                        and practical knowledge.
                       </p>
                     </div>
                   </Fade>
@@ -249,12 +278,19 @@ function App() {
                 <TabPanel>
                   <Fade bottom>
                     <div className="text-center">
-                      <h3 className="text-2xl font-semibold text-violet-500 mb-4">Expertise</h3>
-                      <p className="text-lg">
-                        I am an expert in <strong>MERN Stack Web Development</strong>, with a strong focus on <strong>Frontend Development</strong>.
-                        I specialize in <strong>React.js</strong> to create dynamic, user-friendly, and responsive websites.
-                        My skills also extend to <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, which enable me to build full-stack applications.
-                        I am passionate about developing engaging and functional web applications, making React.js my go-to choice for frontend development.
+                      <h3 className="text-3xl font-bold text-violet-600 mb-4">
+                        My Expertise
+                      </h3>
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        As a <strong>MERN Stack Developer</strong>, I specialize in{" "}
+                        <strong>React.js</strong>, creating responsive and user-friendly
+                        web applications. My expertise extends to{" "}
+                        <strong>Node.js</strong>, <strong>Express.js</strong>, and{" "}
+                        <strong>MongoDB</strong>, enabling me to develop robust
+                        full-stack solutions. I am deeply passionate about building
+                        engaging and scalable applications, with{" "}
+                        <strong>React.js</strong> being my preferred frontend
+                        framework.
                       </p>
                     </div>
                   </Fade>
@@ -263,12 +299,11 @@ function App() {
             </div>
           </Fade>
         </section>
-        <br /><br />
         {/* skills section */}
-        <section id="skills" className="py-16 px-8 ">
-          <div className="group">
+        <section id="skills" className="py-16 px-8 bg-gray-50">
+          <div className="group text-center mb-12">
             <motion.h1
-              className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer"
+              className="text-4xl font-bold text-gray-800 relative inline-block"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.8 }}
@@ -276,36 +311,36 @@ function App() {
             >
               My Skills
               <motion.span
-                className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0"
+                className="absolute left-0 bottom-0 h-1 bg-violet-600 w-0"
                 whileHover={{ width: "100%" }}
                 transition={{ duration: 0.3 }}
               ></motion.span>
             </motion.h1>
           </div>
-          <br /><br />
+
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Side - Skills Description */}
             <motion.div
               className="text-center lg:text-left"
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.8 }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-xl text-black dark:text-black mb-8">
-                I have experience in a wide range of technologies, tools, and techniques, from front-end development to back-end and project management.
+              <p className="text-xl text-gray-700 mb-8">
+                I bring expertise in a variety of technologies and tools, ensuring the delivery of scalable and efficient web applications.
               </p>
               <ul className="text-lg text-gray-600 space-y-4">
-                <li><strong>Front-End Development:</strong> HTML5, CSS, JavaScript, ES6, Tailwind CSS, Bootstrap and React.js</li>
-                <li><strong>Back-End Development:</strong> Node.js, Express.js</li>
+                <li><strong>Front-End:</strong> HTML5, CSS3, JavaScript (ES6), React.js, Tailwind CSS, Bootstrap</li>
+                <li><strong>Back-End:</strong> Node.js, Express.js</li>
                 <li><strong>Databases:</strong> MongoDB</li>
                 <li><strong>APIs:</strong> REST APIs</li>
                 <li><strong>Version Control:</strong> Git & GitHub</li>
-                <li><strong>Deployment:</strong> GitHub Page, Vercel, Netlify and Firebase</li>
+                <li><strong>Deployment:</strong> Vercel, Netlify, Firebase</li>
               </ul>
             </motion.div>
 
-            {/* Right Side - Icons */}
+            {/* Right Side - Skills Icons */}
             <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 50 }}
@@ -313,117 +348,33 @@ function App() {
               viewport={{ once: true, amount: 0.8 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-3xl font-semibold text-black mb-6">Technologies</h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-12">
-                {/* Icons with Animation */}
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faHtml5} />
-                  </div>
-                  <p className="text-lg text-black">HTML5</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faCss3Alt} />
-                  </div>
-                  <p className="text-lg text-black">CSS3</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faJs} />
-                  </div>
-                  <p className="text-lg text-black">JavaScript</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faReact} />
-                  </div>
-                  <p className="text-lg text-black">React.js</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faNodeJs} />
-                  </div>
-                  <p className="text-lg text-black">Node.js</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <BiLogoMongodb />
-                  </div>
-                  <p className="text-lg text-black">MongoDB</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faGitAlt} />
-                  </div>
-                  <p className="text-lg text-black">Git</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </div>
-                  <p className="text-lg text-black">GitHub</p>
-                </motion.div>
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faDocker} />
-                  </div>
-                  <p className="text-lg text-black">Docker</p>
-                </motion.div>
-
-                <motion.div
-                  className="flex flex-col items-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                    <FontAwesomeIcon icon={faBootstrap} />
-                  </div>
-                  <p className="text-lg text-black">Bootstrap</p>
-                </motion.div>
+              <h3 className="text-3xl font-semibold text-gray-800 mb-6">Technologies</h3>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8">
+                {/* Icon Items */}
+                {[
+                  { name: "HTML5", icon: faHtml5 },
+                  { name: "CSS3", icon: faCss3Alt },
+                  { name: "JavaScript", icon: faJs },
+                  { name: "React.js", icon: faReact },
+                  { name: "Node.js", icon: faNodeJs },
+                  { name: "MongoDB", icon: faDatabase },
+                  { name: "Git", icon: faGitAlt },
+                  { name: "GitHub", icon: faGithub },
+                  { name: "Docker", icon: faDocker },
+                  { name: "Bootstrap", icon: faBootstrap },
+                ].map((tech, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex flex-col items-center"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
+                      <FontAwesomeIcon icon={tech.icon} />
+                    </div>
+                    <p className="text-lg text-gray-700">{tech.name}</p>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
