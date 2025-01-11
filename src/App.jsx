@@ -13,6 +13,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import Projects from '../Projects';
+import { TypeAnimation } from 'react-type-animation';
 
 
 function App() {
@@ -151,9 +152,31 @@ function App() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-5xl font-bold leading-none sm:text-6xl">
+              <h1 className="lg:text-4xl font-bold leading-none">
                 Hi, I'm
                 <span className="dark:text-violet-600"> Nadim Mostofa</span>
+              </h1>
+              <h1 className="lg:text-2xl font-bold leading-none">
+                I'm
+                <span className="dark:text-violet-600"> <TypeAnimation
+                  sequence={[
+                    '', // Blank initial state
+                    500, // Waits for 0.5s before starting
+                    'MERN Stack Developer',
+                    1000,
+                    'Front-End Developer',
+                    2000,
+                    'React.js Developer',
+                    3000,
+                    'Web Developer',
+                    () => {
+                      console.log('Sequence completed');
+                    },
+                  ]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                /></span>
               </h1>
               <p className="mt-6 mb-8 text-lg sm:mb-12">
                 A passionate and dedicated junior web developer with hands-on experience in the MERN stack.
@@ -382,52 +405,52 @@ function App() {
         {/* project section */}
         <Projects></Projects>
         {/* contact section */}
-        <section id="contact" className="py-16 px-8 text-black ">
+        <section id="contact" className="py-16 px-8 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
           <ScrollAnimation animateIn="fadeIn">
-            <div className=" flex items-center justify-center px-6 py-12">
-              <div className="bg-white shadow-lg border border-gray-200 rounded-lg p-8 w-full max-w-5xl transition-transform duration-300 hover:scale-105 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="flex items-center justify-center px-6 py-12">
+              <div className="bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 rounded-lg p-8 w-full max-w-5xl transition-transform duration-300 hover:scale-105 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left Side - Contact Info */}
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-bold text-gray-800">Get in Touch</h2>
-                  <p className="text-gray-700">
+                  <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Get in Touch</h2>
+                  <p className="text-gray-700 dark:text-gray-300">
                     I’m here to help! Reach out to me for any queries, collaborations, or project discussions.
                   </p>
 
                   <div className="space-y-4">
                     {/* Phone */}
                     <div className="flex items-center space-x-4">
-                      <FontAwesomeIcon icon={faPhone} className="text-blue-600 text-2xl" />
-                      <span className="text-gray-800">+880 1756790052</span>
+                      <FontAwesomeIcon icon={faPhone} className="text-blue-600 dark:text-blue-400 text-2xl" />
+                      <span className="text-gray-800 dark:text-gray-200">+880 1756790052</span>
                     </div>
 
                     {/* Email */}
                     <div className="flex items-center space-x-4">
-                      <FontAwesomeIcon icon={faEnvelope} className="text-blue-600 text-2xl" />
-                      <span className="text-gray-800">nadimmostafa334@email.com</span>
+                      <FontAwesomeIcon icon={faEnvelope} className="text-blue-600 dark:text-blue-400 text-2xl" />
+                      <span className="text-gray-800 dark:text-gray-200">nadimmostafa334@email.com</span>
                     </div>
 
                     {/* Address */}
                     <div className="flex items-center space-x-4">
-                      <FontAwesomeIcon icon={faMapMarkerAlt} className="text-blue-600 text-2xl" />
-                      <span className="text-gray-800">Rangpur City, Bangladesh</span>
+                      <FontAwesomeIcon icon={faMapMarkerAlt} className="text-blue-600 dark:text-blue-400 text-2xl" />
+                      <span className="text-gray-800 dark:text-gray-200">Rangpur City, Bangladesh</span>
                     </div>
                   </div>
 
                   {/* Social Media Icons */}
                   <div className="flex space-x-6 mt-6">
                     <a
-                      href="https://github.com/Nadimmo?tab=overview&from=2024-12-01&to=2024-12-1"
+                      href="https://github.com/Nadimmo"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-blue-600 text-2xl transition"
+                      className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition"
                     >
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
                     <a
-                      href="https://www.linkedin.com/in/md-nadim-mostofa-931a48247"
+                      href="https://www.linkedin.com/in/md-nadim-mostofa"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-blue-600 text-2xl transition"
+                      className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition"
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
@@ -435,43 +458,35 @@ function App() {
                       href="https://www.facebook.com/profile.php?id=100033618980505"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-blue-600 text-2xl transition"
+                      className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition"
                     >
                       <FontAwesomeIcon icon={faFacebook} />
                     </a>
                   </div>
 
-                  {/* Download CV Button */}
-                  {/* Download CV Button */}
+                  {/* View Resume Button */}
                   <a
-                    href="https://docs.google.com/document/d/1ng98B1qSjpzntnVEmlDfk2oKD3jCX46dS89SuNcCjLc/edit?usp=sharing" // Corrected file path with a leading slash
-                    download // Specifies the downloaded file name
-                    target='_blank'
-                    className="inline-block  mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
+                    href="https://docs.google.com/document/d/1ng98B1qSjpzntnVEmlDfk2oKD3jCX46dS89SuNcCjLc/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
                   >
                     View Resume
                   </a>
-
                 </div>
 
                 {/* Right Side - Contact Form */}
                 <div>
-                  <div className="group">
-                    <h1 className="text-3xl font-bold text-gray-800 relative inline-block hover:cursor-pointer">
-                      Contact Us
-                      <span className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0 transition-all duration-300 group-hover:w-full"></span>
-                    </h1>
-                  </div>
-                  <br /><br />
+                  <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Contact Us</h1>
                   <form
                     ref={formRef}
                     onSubmit={handleSubmit}
-                    className="space-y-6"
+                    className="space-y-6 mt-6"
                     name="submit-to-google-sheet"
                   >
                     {/* First Name */}
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                         First Name
                       </label>
                       <input
@@ -479,14 +494,14 @@ function App() {
                         name="firstName"
                         id="firstName"
                         placeholder="Enter your first name"
-                        className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                        className="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-3 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400"
                         required
                       />
                     </div>
 
                     {/* Email */}
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                         Email
                       </label>
                       <input
@@ -494,14 +509,14 @@ function App() {
                         name="email"
                         id="email"
                         placeholder="Enter your email"
-                        className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                        className="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-3 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400"
                         required
                       />
                     </div>
 
                     {/* Message */}
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                         Message
                       </label>
                       <textarea
@@ -509,26 +524,25 @@ function App() {
                         id="message"
                         rows="4"
                         placeholder="Enter your message"
-                        className="mt-1 block w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500"
+                        className="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 p-3 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400"
                         required
                       ></textarea>
                     </div>
 
                     {/* Submit Button */}
-                    <div>
-                      <button
-                        type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-transform transform hover:scale-105"
-                      >
-                        Send Message
-                      </button>
-                    </div>
+                    <button
+                      type="submit"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-transform transform hover:scale-105"
+                    >
+                      Send Message
+                    </button>
                   </form>
                 </div>
               </div>
             </div>
           </ScrollAnimation>
         </section>
+
 
         {/* footer section */}
         <footer className="footer footer-center bg-[#E8F5E9] text-base-content rounded p-10">
