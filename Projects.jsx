@@ -16,6 +16,11 @@ const Projects = () => {
       image: "https://i.ibb.co.com/f4f70bj/Beauty-Parlor.png",
       animate: { initialX: 100 },
     },
+
+
+  ];
+
+  const project2 = [
     {
       title: "Survey Pro",
       description:
@@ -29,6 +34,9 @@ const Projects = () => {
       image: "https://i.ibb.co.com/cFVrVMK/First.png",
       animate: { initialX: 100 },
     },
+  ]
+
+  const project3 = [
     {
       title: "Cyclist Club",
       description:
@@ -42,6 +50,10 @@ const Projects = () => {
       image: "https://i.ibb.co.com/yyqK9S2/cycle.png",
       animate: { initialX: 100 },
     },
+  ]
+
+  const project4 = [
+
     {
       title: "Doctor House",
       description:
@@ -55,7 +67,8 @@ const Projects = () => {
       image: "https://i.ibb.co.com/5KzYf4t/doctor.png",
       animate: { initialX: 100 },
     },
-  ];
+  ]
+
 
   return (
     <section
@@ -64,32 +77,23 @@ const Projects = () => {
     >
       {/* Projects Header */}
       <div className="text-center mb-16">
-        <motion.h1
-          className="text-4xl font-bold text-gray-800 relative inline-block hover:cursor-pointer"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.5 }}
+        <h1
+          className="text-4xl font-bold text-gray-800  hover:cursor-pointer"
         >
           My Projects
-          <motion.span
-            className="absolute left-0 bottom-0 h-1 bg-blue-600 w-0"
-            whileHover={{ width: "100%" }}
-            transition={{ duration: 0.3 }}
-          ></motion.span>
-        </motion.h1>
+        </h1>
       </div>
 
-      {/* Projects List */}
-      <div className="max-w-7xl mx-auto lg:grid grid-cols-2 gap-12 ">
+      {/* Projects List 1 */}
+      <div className="max-w-7xl mx-auto  m-5">
         {projects.map((project, index) => (
-          <motion.div
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
             key={index}
             className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 lg:mt-0 mt-4"
-            initial={{ opacity: 0, x: project.animate.initialX }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.8 }}
-            transition={{ duration: 0.7, delay: index * 0.2 }}
+
           >
             {/* Project Image */}
             <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden group lg:mt-0 mt-4">
@@ -122,9 +126,146 @@ const Projects = () => {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
+      {/* Projects List 2 */}
+      <div className="max-w-7xl mx-auto  m-5">
+        {project2.map((project, index) => (
+          <div
+          data-aos="flip-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2500"
+            key={index}
+            className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 lg:mt-0 mt-4"
+
+          >
+            {/* Project Image */}
+            <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden group lg:mt-0 mt-4">
+              <img
+                src={project.image}
+                alt={`${project.title} Screenshot`}
+                className="w-full h-full object-cover group-hover:opacity-40 transition-opacity duration-300 p-2"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-blue-600 p-3 rounded-full hover:bg-blue-700 transition-colors"
+                >
+                  <FaLink size={24} />
+                </a>
+              </div>
+            </div>
+
+            {/* Project Details */}
+            <div className="p-6 text-center md:text-left md:w-1/2 space-y-4">
+              <h2 className="text-2xl font-bold text-gray-800">
+                {project.title}
+              </h2>
+              <p className="text-gray-600">{project.description}</p>
+              <ul className="text-sm text-gray-600 list-disc list-inside">
+                {project.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* Projects List 3 */}
+      <div className="max-w-7xl mx-auto  m-5">
+        {project3.map((project, index) => (
+          <div
+          data-aos="flip-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="3000"
+            key={index}
+            className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 lg:mt-0 mt-4"
+
+          >
+            {/* Project Image */}
+            <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden group lg:mt-0 mt-4">
+              <img
+                src={project.image}
+                alt={`${project.title} Screenshot`}
+                className="w-full h-full object-cover group-hover:opacity-40 transition-opacity duration-300 p-2"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-blue-600 p-3 rounded-full hover:bg-blue-700 transition-colors"
+                >
+                  <FaLink size={24} />
+                </a>
+              </div>
+            </div>
+
+            {/* Project Details */}
+            <div className="p-6 text-center md:text-left md:w-1/2 space-y-4">
+              <h2 className="text-2xl font-bold text-gray-800">
+                {project.title}
+              </h2>
+              <p className="text-gray-600">{project.description}</p>
+              <ul className="text-sm text-gray-600 list-disc list-inside">
+                {project.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* Projects List 4 */}
+      <div className="max-w-7xl mx-auto  m-5">
+        {project4.map((project, index) => (
+          <div
+          data-aos="flip-down"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="3500"
+            key={index}
+            className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 lg:mt-0 mt-4"
+
+          >
+            {/* Project Image */}
+            <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden group lg:mt-0 mt-4">
+              <img
+                src={project.image}
+                alt={`${project.title} Screenshot`}
+                className="w-full h-full object-cover group-hover:opacity-40 transition-opacity duration-300 p-2"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-blue-600 p-3 rounded-full hover:bg-blue-700 transition-colors"
+                >
+                  <FaLink size={24} />
+                </a>
+              </div>
+            </div>
+
+            {/* Project Details */}
+            <div className="p-6 text-center md:text-left md:w-1/2 space-y-4">
+              <h2 className="text-2xl font-bold text-gray-800">
+                {project.title}
+              </h2>
+              <p className="text-gray-600">{project.description}</p>
+              <ul className="text-sm text-gray-600 list-disc list-inside">
+                {project.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+
     </section>
   );
 };
