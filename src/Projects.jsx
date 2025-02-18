@@ -134,7 +134,7 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-3 py-2 text-lg font-medium text-white bg-[#6366F1] rounded-full shadow hover:bg-[#463fca] transition-colors"
+                  className="inline-block px-3 py-2 text-sm lg:text-lg font-medium text-white bg-[#6366F1] rounded-full shadow hover:bg-[#463fca] transition-colors"
                 >
                   Live Preview
                 </a>
@@ -142,7 +142,7 @@ const Projects = () => {
                   href={project.github_link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-5 inline-block px-3 py-2 text-lg font-medium text-white bg-[#14B8A6] rounded-full shadow hover:bg-[#0F766E] transition-colors"
+                  className="ml-5 inline-block px-3 py-2 text-sm lg:text-lg font-medium text-white bg-[#14B8A6] rounded-full shadow hover:bg-[#0F766E] transition-colors"
                 >
                   Github Link
                 </a>
