@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import Projects from './Projects';
 import { TypeAnimation } from 'react-type-animation';
 import About from './About';
+import Skills from './Skills';
 
 
 function App() {
@@ -218,85 +219,7 @@ function App() {
         {/* about section */}
        <About></About>
         {/* skills section */}
-        <section id="skills" className="py-16 px-8 bg-gray-50">
-          <div className="group text-center mb-12">
-            <motion.h1
-              className="text-4xl font-bold text-gray-800 relative inline-block"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.8 }}
-              transition={{ duration: 0.5 }}
-            >
-              My Skills
-              <motion.span
-                className="absolute left-0 bottom-0 h-1 bg-violet-600 w-0"
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.3 }}
-              ></motion.span>
-            </motion.h1>
-          </div>
-
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Side - Skills Description */}
-            <motion.div
-              className="text-center lg:text-left"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.8 }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-xl text-gray-700 mb-8">
-                I bring expertise in a variety of technologies and tools, ensuring the delivery of scalable and efficient web applications.
-              </p>
-              <ul className="text-lg text-gray-600 space-y-4">
-                <li><strong>Front-End:</strong> HTML5, CSS3, JavaScript (ES6), React.js, Tailwind CSS, Bootstrap</li>
-                <li><strong>Back-End:</strong> Node.js, Express.js</li>
-                <li><strong>Databases:</strong> MongoDB</li>
-                <li><strong>APIs:</strong> REST APIs</li>
-                <li><strong>Version Control:</strong> Git & GitHub</li>
-                <li><strong>Deployment:</strong> Vercel, Netlify, Firebase</li>
-              </ul>
-            </motion.div>
-
-            {/* Right Side - Skills Icons */}
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.8 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h3 className="text-3xl font-semibold text-gray-800 mb-6">Technologies</h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8">
-                {/* Icon Items */}
-                {[
-                  { name: "HTML5", icon: faHtml5 },
-                  { name: "CSS3", icon: faCss3Alt },
-                  { name: "JavaScript", icon: faJs },
-                  { name: "React.js", icon: faReact },
-                  { name: "Node.js", icon: faNodeJs },
-                  { name: "MongoDB", icon: faDatabase },
-                  { name: "Git", icon: faGitAlt },
-                  { name: "GitHub", icon: faGithub },
-                  { name: "Docker", icon: faDocker },
-                  { name: "Bootstrap", icon: faBootstrap },
-                ].map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex flex-col items-center"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="text-4xl mb-4 text-gray-500 hover:text-violet-600">
-                      <FontAwesomeIcon icon={tech.icon} />
-                    </div>
-                    <p className="text-lg text-gray-700">{tech.name}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        <Skills></Skills>
         {/* project section */}
         <Projects></Projects>
         {/* contact section */}
