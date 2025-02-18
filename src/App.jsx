@@ -217,7 +217,7 @@ function App() {
         </motion.section>
         <br /><br />
         {/* about section */}
-       <About></About>
+        <About></About>
         {/* skills section */}
         <Skills></Skills>
         {/* project section */}
@@ -360,8 +360,6 @@ function App() {
             </div>
           </ScrollAnimation>
         </section>
-
-
         {/* footer section */}
         <footer className="footer footer-center bg-[#E8F5E9] text-base-content rounded p-10">
           <nav className="grid grid-flow-col gap-4">
