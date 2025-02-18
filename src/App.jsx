@@ -169,7 +169,7 @@ function App() {
                     3000,
                     'Web Developer',
                     () => {
-                      console.log('Sequence completed');
+                      // console.log('Sequence completed');
                     },
                   ]}
                   wrapper="span"
