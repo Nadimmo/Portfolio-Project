@@ -2,6 +2,13 @@ import axios from 'axios';
 import React, { useRef } from 'react'
 import Swal from 'sweetalert2';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5, faCss3Alt, faJs, faNodeJs, faGitAlt, faGithub, faAws, faDocker, faBootstrap, faLinkedin, faFacebook, faMonero } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faEnvelope, faLaptopCode, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { BiLogoMongodb } from "react-icons/bi";
+import ScrollAnimation from "react-animate-on-scroll";
+
 const Contact = () => {
 
     const formRef = useRef(); // Reference to the form
