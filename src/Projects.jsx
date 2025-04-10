@@ -25,6 +25,18 @@ const Projects = () => {
       image: "https://i.ibb.co.com/f4f70bj/Beauty-Parlor.png",
     },
     {
+      title: "Blogging Platform",
+      description:
+        "Share your unique ideas, stories, and perspectives with the world. Connect with like-minded individuals and make an impact through your words.",
+      features: [
+        "Admin: vManage users & authors (add, edit, delete, assign roles), Manage all blogs (edit, delete),Manage feedback (edit, delete)",
+        "User: Write, edit, delete blogs,  Like, share, and save blogs,Create and edit profile,Send feedback"
+      ],
+      link: "https://blogging-platform-5850d.web.app/",
+      github_link: "https://github.com/Nadimmo/Beauty-Parlar-Client-side-",
+      image: "https://i.ibb.co.com/B5sRkJnS/Blogs-Platform.png",
+    },
+    {
       title: "Survey Pro",
       description:
         "A survey pro website with user, surveyor, and admin dashboards, focusing on survey participation, management, and analytics.",
