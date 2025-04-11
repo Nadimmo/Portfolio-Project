@@ -20,7 +20,7 @@ function App() {
     {/* Center - Navigation Links */}
     <ul className="menu menu-horizontal px-4 space-x-6 font-semibold lg:space-x-6">
       <li>
-        <a href="/" className="relative hover:text-purple-400 group">
+        <a href="#" className="relative hover:text-purple-400 group">
           Home
           <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
         </a>
