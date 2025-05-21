@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Banner = () => {
     return (
@@ -18,66 +19,69 @@ const Banner = () => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="lg:text-4xl font-bold leading-none">
-                        Hi, I'm
-                        <span className="dark:text-violet-600"> Nadim Mostofa</span>
+                    <h1 className="text-4xl md:text-4xl font-extrabold mb-4">
+                        Hi, I'm <span className="text-violet-600 dark:text-violet-500">Nadim Mostofa</span>
                     </h1>
-                    <h1 className="lg:text-2xl font-bold leading-none">
-                        I'm
-                        <span className="dark:text-violet-600"> <TypeAnimation
-                            sequence={[
-                                '', // Blank initial state
-                                500, // Waits for 0.5s before starting
-                                'MERN Stack Developer',
-                                1000,
-                                'Front-End Developer',
-                                2000,
-                                'React.js Developer',
-                                3000,
-                                'Web Developer',
-                                () => {
-                                    // console.log('Sequence completed');
-                                },
-                            ]}
-                            wrapper="span"
-                            cursor={true}
-                            repeat={Infinity}
-                        /></span>
-                    </h1>
-                    <p className="mt-6 mb-8 text-lg sm:mb-12">
+
+                    <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
+                        I'm a
+                        <span className="text-violet-600 dark:text-violet-500 ml-2">
+                            <TypeAnimation
+                                sequence={[
+                                    'MERN Stack Developer', 1500,
+                                    'Front-End Developer', 1500,
+                                    'React.js Developer', 1500,
+                                    'Web Developer', 1500,
+                                ]}
+                                wrapper="span"
+                                speed={50}
+                                repeat={Infinity}
+                            />
+                        </span>
+                    </h2>
+                    <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                         A passionate and dedicated junior web developer with hands-on experience in the MERN stack.
-                        I specialize in React.js, utilizing my expertise to create innovative and engaging websites.
+                        I specialize in React.js, crafting innovative and user-friendly websites.
                     </p>
-                    <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        <a
-                            rel="noopener noreferrer"
-                            href="#project"
-                            className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50 hover:shadow-lg transition-all"
-                        >
-                            View My Work
+                    {/* Social Media Icons */}
+                    <div className="flex justify-center lg:justify-start gap-4 mb-6 text-2xl text-gray-600 dark:text-gray-300">
+                        <a href="https://www.facebook.com/profile.php?id=100033618980505" target="_blank" rel="noreferrer" className="hover:text-violet-500 transition">
+                            <FaFacebook />
                         </a>
-                        <a
-                            rel="noopener noreferrer"
-                            href="#contact"
-                            className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-white transition-all"
-                        >
-                            Contact Me
+                        <a href="https://www.linkedin.com/in/md-nadim-mostofa-931a48247" target="_blank" rel="noreferrer" className="hover:text-violet-500 transition">
+                            <FaLinkedin />
+                        </a>
+                        <a href="https://github.com/Nadimmo" target="_blank" rel="noreferrer" className="hover:text-violet-500 transition">
+                            <FaGithub />
+                        </a>
+                        <a href="https://www.instagram.com/mdnadim3381" className="hover:text-violet-500 transition">
+                            <FaInstagram />
                         </a>
                     </div>
+
+                    {/* Resume Button */}
+                    <div className="flex justify-center lg:justify-start">
+                        <a
+                            href="/Resume/Nadim_Mostofa_Resume.pdf"
+                            download
+                            className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-2xl shadow-md transition-all"
+                        >
+                            Download Resume
+                        </a>
+                    </div>
+
                 </motion.div>
 
                 {/* Image Section with Hover and Animation */}
                 <motion.div
-                    className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
-                    whileHover={{ scale: 1.1, rotate: 3 }}
-                >
+                    className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
                     <img
-                        src="https://i.ibb.co.com/kxmnLsb/profile.jpg"
+                        src="https://i.ibb.co/rf18zpWs/IMG-20250513-WA0011-01-01.jpg"
                         alt="Profile"
-                        className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-full border-4 border-violet-600 shadow-lg"
+                        className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128  border-2 border-violet-500 shadow-lg rounded-2xl"
                     />
                 </motion.div>
             </div>

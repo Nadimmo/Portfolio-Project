@@ -3,72 +3,48 @@ import { Fade } from 'react-awesome-reveal';
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="py-16 px-8 mt-10 text-gray-800 bg-gradient-to-b from-violet-50 to-blue-50"
-    >
-      <Fade cascade direction="up">
-        <div className="max-w-7xl mx-auto text-center">
+    <section id="about" className="py-20 px-6 bg-[#1e1b1a] text-white">
+      <Fade cascade direction="up" triggerOnce>
+        <div className="max-w-6xl mx-auto text-center">
           {/* Section Title */}
-          <h2 className="text-4xl font-bold text-violet-600 mb-4">
+          <h2 className="text-4xl font-extrabold text-violet-500 mb-4">
             About Me
           </h2>
-          <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-            Hi! I'm <span className="text-violet-600 font-bold">Nadim Mostofa</span>,
-            a passionate web developer. Here’s a glimpse into my educational journey, academic
-            achievements, and technical expertise.
+          <p className="text-lg md:text-xl text-gray-300 mb-14 max-w-3xl mx-auto leading-relaxed">
+            Hi! I'm <span className="text-violet-500 font-semibold">Nadim Mostofa</span>, a passionate MERN Stack Developer with a strong foundation in education and technical skills. Here's a glimpse into my journey so far.
           </p>
 
-          {/* About Cards */}
-          <div className="grid gap-8 md:grid-cols-3">
-            {/* Education Card */}
-            <Fade direction="up" triggerOnce>
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300">
-                <h3 className="text-2xl font-bold text-violet-600 mb-3">
-                  Education
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  I completed my <strong>SSC</strong> at{' '}
-                  <span className="text-violet-500">Rangpur Technical School & College</span> (2019-2020),
-                  specializing in <strong>Civil Drafting with CAD</strong> with a GPA of{' '}
-                  <strong>4.75</strong>. Currently, I'm pursuing a <strong>Diploma in Engineering</strong> in{' '}
-                  <strong>Computer Science and Technology</strong> at{' '}
-                  <span className="text-violet-500">Kurigram Polytechnic Institute</span>, set to graduate in{' '}
-                  <strong>2025</strong>.
-                </p>
-              </div>
-            </Fade>
-
-            {/* Academics Card */}
-            <Fade direction="up" delay={100} triggerOnce>
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300">
-                <h3 className="text-2xl font-bold text-violet-600 mb-3">
-                  Academics
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  I have consistently excelled in academics, demonstrating a strong passion for technology
-                  and programming. I successfully completed my <strong>6th semester</strong> exams and am
-                  currently advancing through the <strong>7th semester</strong>, where I focus on hands-on
-                  projects and practical knowledge.
-                </p>
-              </div>
-            </Fade>
-
-            {/* Expertise Card */}
-            <Fade direction="up" delay={200} triggerOnce>
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300">
-                <h3 className="text-2xl font-bold text-violet-600 mb-3">
-                  Expertise
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  As a <strong>MERN Stack Developer</strong>, I specialize in building responsive and
-                  user-friendly web applications using <strong>React.js</strong> as my primary frontend
-                  framework. My backend expertise includes <strong>Node.js</strong>,{' '}
-                  <strong>Express.js</strong>, and <strong>MongoDB</strong>, which enables me to develop
-                  robust and scalable full-stack solutions.
-                </p>
-              </div>
-            </Fade>
+          {/* Cards Grid */}
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {/* Reusable Card Component */}
+            {[
+              {
+                title: "🎓 Education",
+                content:
+                  "Completed SSC at Rangpur Technical School & College (2019–2020), majoring in Civil Drafting with CAD, GPA: 4.75. Currently pursuing Diploma in Engineering in Computer Science & Technology at Kurigram Polytechnic Institute, graduating in 2025.",
+              },
+              {
+                title: "📚 Academics",
+                content:
+                  "Throughout my diploma, I’ve maintained academic excellence. I’ve completed my 6th semester and am now advancing in the 7th semester, focusing on real-world projects and practical knowledge.",
+              },
+              {
+                title: "💻 Expertise",
+                content:
+                  "As a MERN Stack Developer, I specialize in building fast, modern web apps using React.js (frontend), and Node.js, Express.js, MongoDB (backend). I create responsive, scalable full-stack solutions tailored to real-world use cases.",
+              },
+            ].map((card, i) => (
+              <Fade direction="up" delay={i * 100} triggerOnce key={i}>
+                <div className="bg-[#2e2b29] border border-violet-700 rounded-2xl shadow-md hover:shadow-violet-800 transition duration-300 p-6 flex flex-col h-full">
+                  <h3 className="text-2xl font-semibold text-violet-400 mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-300 text-base leading-relaxed flex-1">
+                    {card.content}
+                  </p>
+                </div>
+              </Fade>
+            ))}
           </div>
         </div>
       </Fade>
