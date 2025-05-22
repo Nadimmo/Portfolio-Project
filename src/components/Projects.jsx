@@ -106,7 +106,7 @@ const Projects = () => {
 
 
   return (
-    <section id="#project" className="p-12 dark:bg-[#332d2b] dark:text-gray-300">
+    <section id="project" className="p-12 dark:bg-[#332d2b] dark:text-gray-300">
       <div className="my-8"> {/* Increased margin for better spacing */}
         <h1 className="text-4xl font-bold text-center text-white dark:text-white mb-4">My Projects</h1> 
         <p className="text-lg text-gray-300 text-center">
