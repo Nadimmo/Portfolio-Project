@@ -90,7 +90,7 @@ const Projects = () => {
   return (
     <section
       id="project"
-      className="py-20 px-6 text-gray-800 bg-gradient-to-b from-blue-50 to-blue-100"
+      className="py-20 px-6 dark:bg-[#2c2523] dark:text-white"
     >
       {/* Section Header */}
       <div className="text-center mb-12">
