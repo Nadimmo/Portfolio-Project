@@ -16,7 +16,7 @@ import { SiExpress, SiNetlify } from 'react-icons/si';
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-16 px-8 bg-[#2c2523] text-white">
+    <section id="skills" className="p-12 dark:bg-[#332d2b] text-white">
       <div className="group text-center mb-12">
         <motion.h1
           className="text-4xl font-extrabold  relative inline-block"

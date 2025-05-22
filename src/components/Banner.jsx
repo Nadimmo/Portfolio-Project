@@ -6,7 +6,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 const Banner = () => {
     return (
         <motion.section
-            className="dark:bg-[#2c2523] dark:text-white "
+            className="dark:bg-[#332d2b] dark:text-white "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}

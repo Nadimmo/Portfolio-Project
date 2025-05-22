@@ -3,7 +3,7 @@ import { Fade } from 'react-awesome-reveal';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6 dark:bg-[#2c2523] dark:text-white">
+    <section id="about" className="py-20 px-6 dark:bg-[#332d2b] dark:text-white">
       <Fade cascade direction="up" triggerOnce>
         <div className="max-w-6xl mx-auto text-center">
           {/* Section Title */}
