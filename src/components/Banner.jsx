@@ -79,7 +79,7 @@ const Banner = () => {
                     transition={{ duration: 1 }}
                     className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
                     <img
-                        src="https://i.ibb.co/rf18zpWs/IMG-20250513-WA0011-01-01.jpg"
+                        src="https://i.ibb.co.com/rf18zpWs/IMG-20250513-WA0011-01-01.jpg"
                         alt="Profile"
                         className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128  border-2 border-violet-500 shadow-lg rounded-2xl"
                     />

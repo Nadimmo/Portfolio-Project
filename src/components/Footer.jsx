@@ -21,7 +21,7 @@ const Footer = () => {
         <a href='https://github.com/Nadimmo?tab=overview&from=2024-12-01&to=2024-12-18' target='_blank' className='text-2xl hover:cursor-pointer hover:text-violet-500'>
           <FaGithub />
         </a>
-        <a href='' target='_blank' className='text-2xl hover:cursor-pointer hover:text-violet-500'>
+        <a href="https://www.instagram.com/mdnadim3381" target='_blank' className='text-2xl hover:cursor-pointer hover:text-violet-500'>
           <FaInstagram />
         </a>
       </div>
