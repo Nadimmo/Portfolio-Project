@@ -118,7 +118,7 @@ const Contact = () => {
                             </form>
                         </div>
                         {/* Right Side - Contact Info */}
-                        <div className="space-y-6">
+                        <div className="space-y-6 lg:mt-[110px] lg:ml-10">
                             <h2 className="text-3xl font-bold">Get in Touch</h2>
                             <p className="text-white ">
                                 I’m here to help! Reach out to me for any queries, collaborations, or project discussions.

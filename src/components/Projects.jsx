@@ -106,7 +106,7 @@ const Projects = () => {
 
 
   return (
-    <section id="project" className="p-12 dark:bg-[#332d2b] dark:text-gray-300">
+    <section id="project" className="p-8 lg:p-12 dark:bg-[#332d2b] dark:text-gray-300">
       <div className="my-8"> {/* Increased margin for better spacing */}
         <h1 className="text-4xl font-bold text-center text-white dark:text-white mb-4">My Projects</h1> 
         <p className="text-lg text-gray-300 text-center">
@@ -152,13 +152,13 @@ const Projects = () => {
                     ))}
                   </ul>
                   {/* button  */}
-                  <div className="flex justify-between gap-3 mt-4"> {/* Adjusted gap */}
-                    <button asChild variant="default" className="flex-1 bg-[#8DD8FF] text-black border border-gray-600 dark:border-gray-500 rounded-lg py-1 lg:py-2 hover:bg-[#69c7ff] transition duration-200">
+                  <div className="lg:flex sm:flex-row md:flex justify-between gap-3 mt-4"> {/* Adjusted gap */}
+                    <button asChild variant="default" className="lg:flex-1 bg-[#8DD8FF] text-black border border-gray-600 dark:border-gray-500 rounded-lg py-2 hover:bg-[#69c7ff] transition duration-200 w-full">
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full">
                         <span className="mr-2"> <FaLink /></span> Live View
                       </a>
                     </button>
-                    <button asChild variant="outline" className="flex-1 border border-gray-600 dark:border-gray-500 rounded-lg py-1 lg:py-2 hover:bg-white hover:text-black transition duration-200">
+                    <button asChild variant="outline" className="lg:flex-1 border border-gray-600 dark:border-gray-500 rounded-lg py-2 hover:bg-white hover:text-black transition duration-200 w-full lg:mt-0 mt-2">
                       <a href={project.github_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full">
                         <span className="mr-2"> <FaGithub /></span> GitHub
                       </a>
