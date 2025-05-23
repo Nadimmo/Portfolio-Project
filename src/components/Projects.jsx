@@ -16,11 +16,23 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Job Portal",
+      description: "Job Portal Web Application built with the MERN Stack, designed to help users find and apply for jobs based on location and category. It also allows users to save jobs, view company information, read blogs, and submit feedback. Admins can manage job posts, users, blogs, and more.",
+      features: [
+        "Admin Features: Post new jobs, add/manage companies, publish/manage blogs, manage users/roles, handle applications/messages, edit/update content.",
+        "User Features:  Job search by location/category, view/save details, apply/track via profile, manage saved jobs, browse latest jobs/blog, see company info/job counts/roles, submit feedback.",
+      ],
+      link: "https://job-portal-5d53a.web.app/",
+      github_link: "https://github.com/Nadimmo/Job-Portal-Client-side-",
+      image: "https://i.imghippo.com/files/DCK9621o.png",
+    },
+    {
+      id: 2,
       title: "Travel Guru",
       description: "Travel Guru is a smart travel platform that offers seamless package booking, integrated payment processing, and an admin panel equipped to manage cancellations, deletions, and a host of additional features.",
       features: [
-        "User:  Effortlessly book travel packages, leave reviews, make secure payments, and track your booking history.",
-        "Admin: Manage users, update travel packages, oversee bookings, and handle user inquiries seamlessly",
+        "Admin Features: Manage users, update travel packages, oversee bookings, and handle user inquiries seamlessly",
+        "User Features:  Effortlessly book travel packages, leave reviews, make secure payments, and track your booking history.",
       ],
       link: "https://travel-guru-a638f.web.app/",
       github_link: "https://github.com/Nadimmo/M9-Travel-Guru",
@@ -28,58 +40,45 @@ const Projects = () => {
     },
     
     {
-      id: 2,
+      id: 3,
       title: "Blogging Platform",
       description:
         "Share your unique ideas, stories, and perspectives with the world. Connect with like-minded individuals and make an impact through your words.",
       features: [
-        "Admin: Manage users & authors (add, edit, delete, assign roles), Manage all blogs (edit, delete),Manage feedback (edit, delete)",
-        "User: Write, edit, delete blogs,  Like, share, and save blogs,Create and edit profile,Send feedback"
+        "Admin Features: Manage users & authors (add, edit, delete, assign roles), Manage all blogs (edit, delete),Manage feedback (edit, delete)",
+        "User Features: Write, edit, delete blogs,  Like, share, and save blogs,Create and edit profile,Send feedback"
       ],
       link: "https://blogging-platform-5850d.web.app/",
       github_link: "https://github.com/Nadimmo/Beauty-Parlar-Client-side-",
       image: "https://i.ibb.co.com/B5sRkJnS/Blogs-Platform.png",
     },
     {
-      id: 3,
+      id: 4,
       title: "Survey Pro",
       description:
         "A survey pro website with user, surveyor, and admin dashboards, focusing on survey participation, management, and analytics.",
       features: [
-        "User: Participate in surveys, view submitted survey reports.",
-        "Surveyor: Add surveyors, manage survey details, update surveys.",
-        "Admin: User management, assign roles, track payment history.",
+        "Admin Features: User management, assign roles, track payment history.",
+        "User Features: Participate in surveys, view submitted survey reports.",
+        "Surveyor Features: Add surveyors, manage survey details, update surveys.",
       ],
       link: "https://assignment-12-6f33b.web.app/",
       github_link: "https://github.com/Nadimmo/M9-Assignment-12-ClientSide",
       image: "https://i.ibb.co.com/cFVrVMK/First.png",
     },
     {
-      id: 4,
+      id: 5,
       title: "Cyclist Club",
       description:
         "A Cyclist Club website for managing events, user roles, and sharing club updates.",
       features: [
-        "Admin: Manage users, assign roles, and post news or updates.",
+        "Admin Features: Manage users, assign roles, and post news or updates.",
         "Moderator: Organize events, upload images, and share updates.",
-        "User: View events, team info, blogs, and submit contact details.",
+        "User Features: View events, team info, blogs, and submit contact details.",
       ],
       link: "https://cylist-club.web.app/",
       github_link: "https://github.com/Nadimmo/Cyclist-Club-Client-Side",
       image: "https://i.ibb.co.com/yyqK9S2/cycle.png",
-    },
-    {
-      id: 5,
-      title: "Doctor House",
-      description:
-        "A Doctor House website for managing appointments, reviews, contact messages, and doctor administration.",
-      features: [
-        "User: Book appointments, view history, make secure payments, and add reviews.",
-        "Admin: Manage doctors, Manage users, Add Doctors and view user requests ",
-      ],
-      link: "https://doctorhouse-259ce.web.app/",
-      github_link: "https://github.com/Nadimmo/M9-DoctoHouse-Project-Final",
-      image: "https://i.ibb.co.com/5KzYf4t/doctor.png",
     },
    {
       id: 6,
@@ -87,8 +86,8 @@ const Projects = () => {
       description:
         "Online platform for women to easily book beauty services, track appointments and payments, and leave reviews. Admins manage users, services, and orders",
       features: [
-        "Admin: Manage users, add services, view orders, and delete users.",
-        "User: Book appointments, secure payments, track payment history and leave reviews."
+        "Admin Features: Manage users, add services, view orders, and delete users.",
+        "User Features: Book appointments, secure payments, track payment history and leave reviews."
       ],
       link: "https://beauty-parlour-ten.vercel.app/",
       github_link: "https://github.com/Nadimmo/Beauty-Parlar-Client-side-",
