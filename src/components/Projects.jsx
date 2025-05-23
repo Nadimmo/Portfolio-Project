@@ -153,16 +153,16 @@ const Projects = () => {
                   </ul>
                   {/* button  */}
                   <div className="flex justify-between gap-3 mt-4"> {/* Adjusted gap */}
-                    <Button asChild variant="default" className="flex-1 bg-[#8DD8FF] text-black border border-gray-600 dark:border-gray-500 rounded-lg py-2 hover:bg-[#69c7ff] transition duration-200">
+                    <button asChild variant="default" className="flex-1 bg-[#8DD8FF] text-black border border-gray-600 dark:border-gray-500 rounded-lg py-1 lg:py-2 hover:bg-[#69c7ff] transition duration-200">
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full">
                         <span className="mr-2"> <FaLink /></span> Live View
                       </a>
-                    </Button>
-                    <Button asChild variant="outline" className="flex-1 border border-gray-600 dark:border-gray-500 rounded-lg py-2 hover:bg-white hover:text-black transition duration-200">
+                    </button>
+                    <button asChild variant="outline" className="flex-1 border border-gray-600 dark:border-gray-500 rounded-lg py-1 lg:py-2 hover:bg-white hover:text-black transition duration-200">
                       <a href={project.github_link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full">
                         <span className="mr-2"> <FaGithub /></span> GitHub
                       </a>
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </div>

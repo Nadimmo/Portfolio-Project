@@ -64,7 +64,7 @@ const Contact = () => {
                             >
                                 {/* First Name */}
                                 <div>
-                                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-700">
+                                    <label htmlFor="firstName" className="block text-sm font-medium ">
                                         First Name
                                     </label>
                                     <input
