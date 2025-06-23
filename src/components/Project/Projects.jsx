@@ -6,13 +6,14 @@ import "aos/dist/aos.css";
 import ProjectOne from "./ProjectOne";
 import ProjectTwo from "./ProjectTwo";
 import ProjectThree from "./ProjectThree";
-// import ProjectFour from "./ProjectFour"; // New
-// import ProjectFive from "./ProjectFive"; // New
-// import ProjectSix from "./ProjectSix";   // New
+  
 
 // Assuming your Swiper component for featured projects
 // You'll need to pass the featured project data to it
 import ProjectSwiper from "./ProjectSwiper"; // Create this component for your carousel
+import ProjectFour from "./ProjectFour";
+import ProjectFive from "./ProjectFive";
+import ProjectSix from "./ProjectSix";
 
 const Projects = () => {
   useEffect(() => {
@@ -41,21 +42,21 @@ const Projects = () => {
       component: <ProjectThree />,
       isFeatured: true,
     },
-    // {
-    //   id: "project-four",
-    //   component: <ProjectFour />,
-    //   isFeatured: false,
-    // },
-    // {
-    //   id: "project-five",
-    //   component: <ProjectFive />,
-    //   isFeatured: false,
-    // },
-    // {
-    //   id: "project-six",
-    //   component: <ProjectSix />,
-    //   isFeatured: false,
-    // },
+    {
+      id: "project-four",
+      component: <ProjectFour />,
+      isFeatured: true,
+    },
+    {
+      id: "project-five",
+      component: <ProjectFive />,
+      isFeatured: true,
+    },
+    {
+      id: "project-six",
+      component: <ProjectSix />,
+      isFeatured: true,
+    },
   ];
 
   // Filter projects for the swiper (e.g., your top 2-3)
