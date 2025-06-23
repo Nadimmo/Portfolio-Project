@@ -6,7 +6,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 const Banner = () => {
     return (
         <motion.section
-            className="dark:bg-[#332d2b] dark:text-white "
+            className=""
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -23,7 +23,7 @@ const Banner = () => {
                         Hi, I'm <span className="text-violet-600 dark:text-violet-500">Nadim Mostofa</span>
                     </h1>
 
-                    <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
+                    <h2 className="text-2xl md:text-3xl font-semibold mb-6 ">
                         I'm a
                         <span className="text-violet-600 dark:text-violet-500 ml-2">
                             <TypeAnimation
@@ -39,12 +39,12 @@ const Banner = () => {
                             />
                         </span>
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                    <p className="text-lg  mb-6">
                         A passionate and dedicated junior web developer with hands-on experience in the MERN stack.
                         I specialize in React.js, crafting innovative and user-friendly websites.
                     </p>
                     {/* Social Media Icons */}
-                    <div className="flex justify-center lg:justify-start gap-4 mb-6 text-2xl text-gray-600 dark:text-gray-300">
+                    <div className="flex justify-center lg:justify-start gap-4 mb-6 text-2xl ">
                         <a href="https://www.facebook.com/profile.php?id=100033618980505" target="_blank" rel="noreferrer" className="hover:text-violet-500 transition">
                             <FaFacebook />
                         </a>

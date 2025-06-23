@@ -1,16 +1,16 @@
-import Projects from './components/Projects';
 import About from './components/About';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Banner from './components/Banner';
-
+import Projects from './components/Project/Projects';
+import './index.css'
 
 function App() {
 
   return (
-    <div className="bg-white">
+    <div >
       <Header />
       {/* main section */}
       <main>

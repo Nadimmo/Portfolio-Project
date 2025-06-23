@@ -1,5 +1,5 @@
-import React from 'react'
 import { FiArrowDownRight } from "react-icons/fi";
+import ToggleButton from "./ToggleButton";
 
 
 const Header = () => {
@@ -40,10 +40,11 @@ const Header = () => {
     </>
 
 
+
     return (
         <div>
             <section className="transition-all fixed z-10 w-full">
-                <div className="navbar dark:bg-[#2c2523] dark:text-white">
+                <div className="navbar ">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,7 +75,7 @@ const Header = () => {
                     </div>
                     {/* Right Side - Profile Image */}
                     <div className="navbar-end">
-                        <a href='#contact' className='btn bg-[#71C0BB] text-black rounded-2xl border-none hover:bg-[#B0DB9C]'>Hire me <span> <FiArrowDownRight /> </span></a>
+                        <ToggleButton/>
                     </div>
                 </div>
             </section>

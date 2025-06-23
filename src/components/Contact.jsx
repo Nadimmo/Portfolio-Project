@@ -49,7 +49,7 @@ const Contact = () => {
 
 
     return (
-        <section id="contact" className="py-16 px-8 dark:bg-[#332d2b] dark:text-white">
+        <section id="contact" className="py-16 px-8 ">
             <ScrollAnimation animateIn="fadeIn">
                 <div className="flex items-center justify-center px-6 py-12">
                     <div className="rounded-lg p-8 w-full max-w-5xl transition-transform duration-300 hover:scale-105 grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -120,7 +120,7 @@ const Contact = () => {
                         {/* Right Side - Contact Info */}
                         <div className="space-y-6 lg:mt-[110px] lg:ml-10">
                             <h2 className="text-3xl font-bold">Get in Touch</h2>
-                            <p className="text-white ">
+                            <p className=" ">
                                 I’m here to help! Reach out to me for any queries, collaborations, or project discussions.
                             </p>
 
@@ -128,19 +128,19 @@ const Contact = () => {
                                 {/* Phone */}
                                 <div className="flex items-center space-x-4">
                                     <FontAwesomeIcon icon={faPhone} className=" text-2xl" />
-                                    <span className="text-white ">+880 1756790052</span>
+                                    <span className=" ">+880 1756790052</span>
                                 </div>
 
                                 {/* Email */}
                                 <div className="flex items-center space-x-4">
                                     <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
-                                    <span className="text-white w-1/2">nadimmostafa334@email.com</span>
+                                    <span className="w-1/2">nadimmostafa334@email.com</span>
                                 </div>
 
                                 {/* Address */}
                                 <div className="flex items-center space-x-4">
                                     <FontAwesomeIcon icon={faMapMarkerAlt} className=" text-2xl" />
-                                    <span className="text-white">Rangpur City, Bangladesh</span>
+                                    <span className="">Rangpur City, Bangladesh</span>
                                 </div>
                             </div>
 
@@ -150,7 +150,7 @@ const Contact = () => {
                                     href="https://github.com/Nadimmo"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-600 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-500 text-2xl transition"
+                                    className=" hover:text-blue-400 dark:hover:text-blue-500 text-2xl transition"
                                 >
                                     <FontAwesomeIcon icon={faGithub} />
                                 </a>
@@ -158,7 +158,7 @@ const Contact = () => {
                                     href="https://www.linkedin.com/in/md-nadim-mostofa"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-600 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-400 text-2xl transition"
+                                    className=" hover:text-blue-400 dark:hover:text-blue-400 text-2xl transition"
                                 >
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </a>
@@ -166,7 +166,7 @@ const Contact = () => {
                                     href="https://www.facebook.com/profile.php?id=100033618980505"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-600 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-400 text-2xl transition"
+                                    className=" hover:text-blue-400 dark:hover:text-blue-400 text-2xl transition"
                                 >
                                     <FontAwesomeIcon icon={faFacebook} />
                                 </a>

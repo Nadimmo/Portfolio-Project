@@ -3,14 +3,14 @@ import { Fade } from 'react-awesome-reveal';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6 dark:bg-[#332d2b] dark:text-white">
+    <section id="about" className="py-20 px-6 ">
       <Fade cascade direction="up" triggerOnce>
         <div className="max-w-6xl mx-auto text-center">
           {/* Section Title */}
           <h2 className="text-4xl font-extrabold text-violet-500 mb-4">
             About Me
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-14 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl  mb-14 max-w-3xl mx-auto leading-relaxed">
             Hi! I'm <span className="text-violet-500 font-semibold">Nadim Mostofa</span>, a passionate MERN Stack Developer with a strong foundation in education and technical skills. Here's a glimpse into my journey so far.
           </p>
 
