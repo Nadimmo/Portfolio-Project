@@ -1,17 +1,18 @@
 import React, { useState, } from 'react';
-const ProjectOne = () => {
+const ProjectThree = () => {
   const project = {
-    id: 1,
-    title: "Job Portal",
-    description: "Job Portal Web Application built with the MERN Stack, designed to help users find and apply for jobs based on location and category. It also allows users to save jobs, view company information, read blogs, and submit feedback. Admins can manage job posts, users, blogs, and more.",
-    features: [
-      "Admin Features: Post new jobs, add/manage companies, publish/manage blogs, manage users/roles, handle applications/messages, edit/update content.",
-      "User Features:  Job search by location/category, view/save details, apply/track via profile, manage saved jobs, browse latest jobs/blog, see company info/job counts/roles, submit feedback.",
-    ],
-    link: "https://job-portal-5d53a.web.app/",
-    github_link: "https://github.com/Nadimmo/Job-Portal-Client-side-",
-    image: "https://i.imghippo.com/files/DCK9621o.png",
-  }
+      id: 3,
+      title: "Blogging Platform",
+      description:
+        "Share your unique ideas, stories, and perspectives with the world. Connect with like-minded individuals and make an impact through your words.",
+      features: [
+        "Admin Features: Manage users & authors (add, edit, delete, assign roles), Manage all blogs (edit, delete),Manage feedback (edit, delete)",
+        "User Features: Write, edit, delete blogs,  Like, share, and save blogs,Create and edit profile,Send feedback"
+      ],
+      link: "https://blogging-platform-5850d.web.app/",
+      github_link: "https://github.com/Nadimmo/Beauty-Parlar-Client-side-",
+      image: "https://i.imghippo.com/files/Fcwh4556SU.png",
+    }
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -19,20 +20,16 @@ const ProjectOne = () => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 m-4 text-center">
+    <div className="bg-white shadow-lg rounded-lg p-6 m-4 text-center ">
       <div className='lg:flex justify-between'>
           {/* image */}
         <div>
-          {!showDetails && <img
+           <img
             src={project.image}
             alt={project.title}
             className="w-full h-auto rounded-md mb-4 "
-          />}
-          {showDetails && <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-auto rounded-md mb-4 lg:mt-20"
-          />}
+          />
+          
           
         </div>
         {/* details */}
@@ -87,4 +84,4 @@ const ProjectOne = () => {
   );
 };
 
-export default ProjectOne;
+export default ProjectThree;

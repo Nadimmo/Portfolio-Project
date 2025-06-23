@@ -1,17 +1,17 @@
 import React, { useState, } from 'react';
-const ProjectOne = () => {
+const ProjectTwo = () => {
   const project = {
-    id: 1,
-    title: "Job Portal",
-    description: "Job Portal Web Application built with the MERN Stack, designed to help users find and apply for jobs based on location and category. It also allows users to save jobs, view company information, read blogs, and submit feedback. Admins can manage job posts, users, blogs, and more.",
-    features: [
-      "Admin Features: Post new jobs, add/manage companies, publish/manage blogs, manage users/roles, handle applications/messages, edit/update content.",
-      "User Features:  Job search by location/category, view/save details, apply/track via profile, manage saved jobs, browse latest jobs/blog, see company info/job counts/roles, submit feedback.",
-    ],
-    link: "https://job-portal-5d53a.web.app/",
-    github_link: "https://github.com/Nadimmo/Job-Portal-Client-side-",
-    image: "https://i.imghippo.com/files/DCK9621o.png",
-  }
+      id: 2,
+      title: "Travel Guru",
+      description: "Travel Guru is a smart travel platform that offers seamless package booking, integrated payment processing, and an admin panel equipped to manage cancellations, deletions, and a host of additional features.",
+      features: [
+        "Admin Features: Manage users, update travel packages, oversee bookings, and handle user inquiries seamlessly",
+        "User Features:  Effortlessly book travel packages, leave reviews, make secure payments, and track your booking history.",
+      ],
+      link: "https://travel-guru-a638f.web.app/",
+      github_link: "https://github.com/Nadimmo/M9-Travel-Guru",
+      image: "https://i.ibb.co.com/rRGGRDRz/travel.png",
+    }
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -36,7 +36,7 @@ const ProjectOne = () => {
           
         </div>
         {/* details */}
-        <div className='lg:ml-4 '>
+        <div className='lg:ml-4 mt-6'>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">{project.title}</h2>
           <p className="text-gray-600 text-base mb-4">{project.description}</p>
 
@@ -87,4 +87,4 @@ const ProjectOne = () => {
   );
 };
 
-export default ProjectOne;
+export default ProjectTwo;
