@@ -23,7 +23,7 @@ const Header = () => {
         </a>
       </li>
       <li>
-        <a href="#project" className="relative hover:text-purple-400 group">
+        <a href="#projects" className="relative hover:text-purple-400 group">
           Project
           <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
         </a>
