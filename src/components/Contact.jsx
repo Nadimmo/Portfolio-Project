@@ -49,7 +49,7 @@ const Contact = () => {
 
 
     return (
-        <section id="contact" className="py-16 px-8 ">
+        <section id="contact" className=" px-8 ">
             <ScrollAnimation animateIn="fadeIn">
                 <div className="flex items-center justify-center px-6 py-12">
                     <div className="rounded-lg p-8 w-full max-w-5xl transition-transform duration-300 hover:scale-105 grid grid-cols-1 lg:grid-cols-2 gap-8">
