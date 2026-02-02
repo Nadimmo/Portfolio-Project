@@ -62,7 +62,7 @@ const Banner = () => {
                     {/* Resume Button */}
                     <div className="flex justify-center lg:justify-start">
                         <a
-                            href="/Resume/Nadim_Mostofa_Resume.pdf"
+                            href="/src/MERN Stack .pdf"
                             download
                             className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-2xl shadow-md transition-all"
                         >
@@ -79,7 +79,7 @@ const Banner = () => {
                     transition={{ duration: 1 }}
                     className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
                     <img
-                        src="https://i.ibb.co.com/rf18zpWs/IMG-20250513-WA0011-01-01.jpg"
+                        src="https://i.ibb.co.com/F4GHhXTf/Nadim.png"
                         alt="Profile"
                         className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128  border-2 border-violet-500 shadow-lg rounded-2xl"
                     />
