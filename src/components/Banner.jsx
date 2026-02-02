@@ -62,7 +62,7 @@ const Banner = () => {
                     {/* Resume Button */}
                     <div className="flex justify-center lg:justify-start">
                         <a
-                            href="/public/Resume.pdf"
+                            href="/Resume.pdf"
                             download
                             className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-2xl shadow-md transition-all"
                         >

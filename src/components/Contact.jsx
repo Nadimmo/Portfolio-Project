@@ -174,7 +174,7 @@ const Contact = () => {
 
                             {/* Download Resume Button */}
                             <a
-                                href="/public/Resume.pdf"
+                                href="/Resume.pdf"
                                 download
                                 rel="noopener noreferrer"
                                 className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
